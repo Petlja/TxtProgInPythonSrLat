@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Brojanje i sumiranje &#8212; Tekstualno programiranje u Pajtonu</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Liste" href="02_Console_13_list.html" />
+    <link rel="prev" title="Kolekcije podataka" href="02_Console_11_collections.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Tekstualno programiranje u Pajtonu</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="brojanje-i-sumiranje">
+<h1>Brojanje i sumiranje<a class="headerlink" href="#brojanje-i-sumiranje" title="Permalink to this headline">¶</a></h1>
+<p>Vrlo je čest slučaj da nas iz kolekcije podataka interesuju samo neki. Ovde ćemo vežbati kako da prebrojimo i po potrebi saberemo podatke koji nas interesuju, odnosno koji ispunjavaju neki uslov.</p>
+<div class="section" id="brojanje">
+<h2>Brojanje<a class="headerlink" href="#brojanje" title="Permalink to this headline">¶</a></h2>
+<p>Program (algoritam) pomoću koga prebrojavamo elemente kolekcije koji ispunjavaju dati uslov u opštem obliku izgleda ovako:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">br</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">kolekcija</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="n">ispunjava</span> <span class="n">uslov</span><span class="p">):</span>
+        <span class="n">br</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">br</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Naredba <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+=</span> <span class="pre">a</span></code> povećava vrednost promenljive <em>x</em> za <em>a</em>. To je u stvari skraćeni zapis naredbe <code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">a</span></code>, koja promenljivoj <em>x</em> dodeljuje vrednost <em>x + a</em>.</p>
+<p>Naredba <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-=</span> <span class="pre">a</span></code> smanjuje vrednost promenljive <em>x</em> za <em>a</em>. To je skraćeni zapis naredbe <code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">-</span> <span class="pre">a</span></code>, koja promenljivoj <em>x</em> dodeljuje vrednost <em>x - a</em>.</p>
+
+    </p></div></div>
+<p>U našem primeru, naredba <em>br += 1</em> povećava vrednost promenljive <em>br</em> za 1.</p>
+<div class="section" id="primeri-i-zadaci">
+<h3>Primeri i zadaci<a class="headerlink" href="#primeri-i-zadaci" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Primer - sastanak:</strong></p>
+<p>Vođa tima je ponudio dva termina za sastanak koji treba da se održi sutra. Svaki član tima je upisao u tabelu koji termin bi mu više odgovarao (1 za prvi termin, 2 za drugi). Ti podaci su prebačeni u prvi red programa.</p>
+<p>Dovršiti program - skriptu, tako da za date podatke o glasanju članova tima odgovara koliko ih je glasalo za prvi, a koliko za drugi termin.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__counting_meeting" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__counting_meeting data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+termini = (1, 2, 2, 1, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 1)
+</textarea>
+</div>
+<p>Možemo na primer da prebrojimo koliko članova tima je glasalo za prvi termin, a ostale da izračunamo na kraju.</p>
+
+<div data-childcomponent="console__counting_meeting_sol1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__counting_meeting_sol1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+termini = (1, 2, 2, 1, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 1)
+
+br_prvi_termin = 0
+for t in termini:
+    if t == 1:
+        br_prvi_termin += 1
+
+br_drugi_termin = len(termini) - br_prvi_termin
+
+print('Za prvi termin je glasalo', br_prvi_termin, 'a za drugi', br_drugi_termin, 'članova tima.')
+</textarea>
+</div>
+<p>Drugi način je da brojimo uporedo glasove i za prvi i za drugi termin.</p>
+
+<div data-childcomponent="console__counting_meeting_sol2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__counting_meeting_sol2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+termini = (1, 2, 2, 1, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 1)
+
+br_prvi_termin = 0
+br_drugi_termin = 0
+for t in termini:
+    if t == 1:
+        br_prvi_termin += 1
+    if t == 2:
+        br_drugi_termin += 1
+print('Za prvi termin je glasalo', br_prvi_termin, 'a za drugi', br_drugi_termin, 'članova tima.')
+</textarea>
+</div>
+<p>ili, ako pretpostavimo da su podaci „čisti”, to jest da nema drugih vrednsoti osim 1 i 2:</p>
+
+<div data-childcomponent="console__counting_meeting_sol3" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__counting_meeting_sol3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+termini = (1, 2, 2, 1, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 1)
+
+br_prvi_termin = 0
+br_drugi_termin = 0
+for t in termini:
+    if t == 1:
+        br_prvi_termin += 1
+    else:
+        br_drugi_termin += 1
+
+print('Za prvi termin je glasalo', br_prvi_termin, 'a za drugi', br_drugi_termin, 'članova tima.')
+</textarea>
+</div>
+<p>U slučaju da podaci nisu poznati unapred nego ih treba unositi, mogli bismo da napišemo ovakav program:</p>
+
+<div data-childcomponent="console__counting_meeting_sol4" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__counting_meeting_sol4 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+n = int(input("Koliko članova tima je glasalo: "))
+br_prvi_termin = 0
+for i in range(n):
+    t = int(input("Unesite jedan glas: "))
+    if t == 1:
+        br_prvi_termin += 1
+
+br_drugi_termin = n - br_prvi_termin
+print('Za prvi termin je glasalo', br_prvi_termin, 'a za drugi', br_drugi_termin, 'članova tima.')
+</textarea>
+</div>
+<p>Na početku ovog programa učitavamo broj glasova <em>n</em>, a zatim koristimo <em>for</em> petlju da <em>n</em> puta ponovimo učitavanje i brojanje jednog glasa.</p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Zadatak - testiranje:</strong></p>
+<p>Nekoliko ljudi je rešavalo test poznavanja saobraćajnih propisa, što je uslov za izlazak na praktični deo ispita. Test se smatra položenim ako je je broj netačnih odgovora manji ili jednak 3.</p>
+<p>Na početku programa - skripte su dati rezultati testiranja jedne grupe kandidata (broj netačnih odgovora za svaku osobu koja je rešavala test). Dovršite skriptu tako da ispisuje koliko kandidata je položilo test.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__counting_test" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__counting_test data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+netacnih = (2, 5, 1, 0, 4, 2, 7, 1)
+polozilo = 0
+
+# ovde dodajte naredbe koje nedostaju
+
+print(polozilo)
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Zadatak - bazen</strong></p>
+<p>Priprema se poseta bazenu za grupu dece. Svi koji su niži od 160 santimetara mogu da idu samo u manji u bazen. Organizatora interesuje koliko dece je niže od 160 santimetara, da bi mogao da planira grupe.</p>
+<p>Na početku programa su date visine dece. Dopuniti program tako da ispisuje broj dece niže od 160 santimetara.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__counting_swimmingpool" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__counting_swimmingpool data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+visine = (160, 161, 174, 149, 153, 160, 158, 182, 144)
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Zadatak - vlažnost</strong></p>
+<p>U botaničkoj bašti se kod retkih i osetljivih vrsta jednom dnevno meri vlažnost zemljišta. Vlažnost se izražava brojem od 0 do 1, a smatra se da su uslovi za razvoj bialjaka dobri kada je vlažnost između 0.3 i 0.7 (uključujući i granice).</p>
+<p>Na početku programa - skripte su date vlažnosti izmerene tokom nekog perioda. Dovršiti skriptu tako da ispisuje broj dana kada vlažnost nije bila dobra.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__counting_humidity" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__counting_humidity data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+vlaznosti = (0.2, 0.5, 0.61, 0.40, 0.72, 0.51, 0.43, 0.35, 0.28)
+</textarea>
+</div>
+</div>
+</div>
+<div class="section" id="sumiranje">
+<h2>Sumiranje<a class="headerlink" href="#sumiranje" title="Permalink to this headline">¶</a></h2>
+<p>U jednoj velikoj grupi praktičnih problema do rezultata dolazimo tako što ga postepeno gradimo (nakupljamo) tokom prolaženja kroz podatke. Na primer, ako nam je potreban zbir nekih brojeva, do njega možemo da dođemo na ovaj uopšteni način:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zbir</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">podatak</span> <span class="ow">in</span> <span class="n">kolekcija</span><span class="p">:</span>
+    <span class="n">zbir</span> <span class="o">+=</span> <span class="n">podatak</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">zbir</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Kada nam treba zbir svih elemenata kolekcije, isti rezultat dobijamo i pozivom funkcije <em>sum</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">kolekcija</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Postepeno formiranje rezultata ćemo koristiti kada nam od elemenata iz kolekcije trebaju samo neki, to jest oni koji ispunjavaju zadati uslov. U tom slučaju, postupak za računanje zbira bi uopšteno izgledao ovako:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zbir</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">podatak</span> <span class="ow">in</span> <span class="n">kolekcija</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">podatak</span> <span class="n">ispunjava</span> <span class="n">uslov</span><span class="p">):</span>
+        <span class="n">zbir</span> <span class="o">+=</span> <span class="n">podatak</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">zbir</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Da bismo dobili srednju vrednost podataka koji ispunjavaju neki uslov, potrebno je prebrojati i sabrati takve podatke, a onda njihov zbir podeliti njihovim brojem. U opštem slučaju to izgleda ovako:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zbir</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">brojac</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">podatak</span> <span class="ow">in</span> <span class="n">kolekcija</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">podatak</span> <span class="n">ispunjava</span> <span class="n">uslov</span><span class="p">):</span>
+        <span class="n">zbir</span> <span class="o">+=</span> <span class="n">podatak</span>
+        <span class="n">brojac</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">zbir</span> <span class="o">/</span> <span class="n">brojac</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Napominjemo da se u Pajtonu zbir i srednja vrednost izabranih elemenata kolekcije može dobiti i na kraći i efikasniji način. Ovde smo se odlučili za navedeni način, jer on izgleda skoro isto kao u drugim programskim jezicima.</p>
+<div class="section" id="id1">
+<h3>Primeri i zadaci<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Primer - Prosečan rezultat IQ testa:</strong></p>
+<p>Dati su rezultati IQ testa za grupu ljudi. Rezultat -1 znači da osoba nije radila test. Dovršiti program tako da ispisuje srednju vrednost dobijenu na testiranju.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__accumulate_IQ" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__accumulate_IQ data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+iq_rezultati = (-1, 98, 115, -1, 83, 130, 101, 122, -1, 108)
+</textarea>
+</div>
+<p>Program možemo da napišemo ovako:</p>
+
+<div data-childcomponent="console__accumulate_IQ_sol" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__accumulate_IQ_sol data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+iq_rezultati = (-1, 98, 115, -1, 83, 130, 101, 122, -1, 108)
+broj_testiranih = 0
+zbir_rezultata = 0
+
+for rez in iq_rezultati:
+    if rez != -1:
+        zbir_rezultata += rez
+        broj_testiranih += 1
+
+if broj_testiranih > 0:
+    srednji_iq = zbir_rezultata / broj_testiranih
+    print('Srednji IQ je', srednji_iq)
+else:
+    print('Niko nije testiran.')
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Zadatak - dežurstva:</strong></p>
+<p>U preduzeću H svi zaposleni povremeno ostaju na dežurstvu. Norma za prethodni period je 20 sati dežurstva. Svaki sat dežurstva preko norme se plaća po posebnom cenovniku. Dat je broj sati dežurstva za svakog zaposlenog, a direktor želi da zna koliko je ukupno bilo sati dežurstva preko norme.</p>
+<p>Dovršiti program tako da ispisuje ukupan broj prekovremenih sati dežurstva.</p>
+
+    </p></div></div>
+<p>Ako sto dobro rešili zadatak, za date podatke treba da dobijete rezultat 25, jer je <span class="math notranslate nohighlight">\((21-20)+(23-20)+(34-20)+(25-20)+(22-20)=25\)</span>.</p>
+
+<div data-childcomponent="console__accumulate_overtime" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__accumulate_overtime data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+norma = 20
+radni_sati = (21, 23, 19, 34, 25, 22, 17)
+ukupno_preko = 0
+# dovrsite program
+
+print('Ukupan broj prekovremenih sati je', ukupno_preko)
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Zadatak - prosečan prinos:</strong></p>
+<p>U jednom voćnjaku posle treće godine se prati prinos šljive po stablu. Stabla sa prinosom ispod 3 kilograma se smatraju oštećenim ili obolelim i biće izvađena.</p>
+<p>Dat je prinos svih stabala u voćnjaku. Dovršiti program tako da izračunava i ispisuje prosečan prinos zdravih stabala (sa prinosom od 3 i više kilograma).</p>
+
+    </p></div></div>
+<p>Za date podatke treba da dobijete reultat približno 14.757 .</p>
+
+<div data-childcomponent="console__accumulate_yield" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__accumulate_yield data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+prinosi = (11.3, 15.8, 9.5, 2.6, 21.1, 13.4, 17.9, 0.7, 14.3)
+
+# dovrsite program
+</textarea>
+</div>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Kolekcije podataka' data-toggle="tooltip"><a href="02_Console_11_collections.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Liste' data-toggle="tooltip"><a href="02_Console_13_list.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Kolekcije podataka' data-toggle="tooltip"><a href="02_Console_11_collections.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Liste' data-toggle="tooltip"><a href="02_Console_13_list.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

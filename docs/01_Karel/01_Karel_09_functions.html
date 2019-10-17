@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Napravite paket naredbi &#8212; Tekstualno programiranje u Pajtonu</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Dodatna uputstva funkciji" href="01_Karel_10_functions_params.html" />
+    <link rel="prev" title="Naredba if - vežbanje" href="01_Karel_08_if_practice.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Tekstualno programiranje u Pajtonu</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="napravite-paket-naredbi">
+<h1>Napravite paket naredbi<a class="headerlink" href="#napravite-paket-naredbi" title="Permalink to this headline">¶</a></h1>
+<p>Podsetimo se zadatka <em>Uzmi lopticu na susednom polju</em>. Zadatak je bio da Karel u svakom smeru pokuša da ode na susedno polje i (ako uspe da ode na susedno polje) da pokuša da uzme lopticu tamo. Naravno, da bi Karel mogao da pokuša u sledećem smeru, bilo je potrebno i da se posle svakog pokušaja vrati na polazno polje.</p>
+<p>Program koji rešava zadatak može da izgleda ovako:</p>
+
+<div data-childcomponent="Karel_functions__take_neighboring_ball_1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_functions__take_neighboring_ball_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+from karel import *
+for i in range(4):          # u svakom od 4 smera
+    if moze_napred():       # potrazi polje u tom smeru
+        napred()
+        if ima_loptica_na_polju():
+            uzmi()
+        levo()              # vrati se na polazno polje
+        levo()
+        napred()
+        levo()              # okreni se ka polju koje si probao
+        levo()
+    levo()                  # sledeci smer
+</textarea>
+</div>
+<p>Verovatno vam je deo programa od sedme do jedanaeste linije malo teži za praćenje. U tom delu možda zamišljate Karela kako izvršava naredbu po naredbu da biste sasvim razumeli šta se tu dešava.</p>
+<p>Komentari donekle pomažu da se ovaj deo programa lakše razume. Pored komentara, još bolje bi bilo kada bi postojala funkcija <em>nazad()</em>, pomoću koje bi Karel napravio korak unazad. Tada bi program bio kraći i jasniji:</p>
+
+<div data-childcomponent="Karel_functions__take_neighboring_ball_2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_functions__take_neighboring_ball_2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+from karel import *
+for i in range(4):          # u svakom od 4 smera
+    if moze_napred():       # potrazi polje u tom smeru
+        napred()
+        if ima_loptica_na_polju():
+            uzmi()
+        nazad()             # vrati se na polazno polje
+    levo()                  # sledeci smer
+</textarea>
+</div>
+<p>Funkcija <em>nazad()</em> nije deo Karel biblioteke, ali možemo vrlo jednostavno da sami napravimo tu funkciju. Kada je napravimo, funkciju <em>nazad()</em> moći ćemo da je koristimo ravnopravno sa funkcijama biblioteke <em>Karel</em> kao što su <em>napred()</em>, <em>desno()</em> i ostale.</p>
+<div class="section" id="kako-se-pisu-funkcije">
+<h2>Kako se pišu funkcije<a class="headerlink" href="#kako-se-pisu-funkcije" title="Permalink to this headline">¶</a></h2>
+<p>Za sada ćemo se upoznati samo sa najjednostavnijim načinom pisanja funkcije u Pajtonu, a ostale, složenije oblike ćemo upoznavati kasnije.</p>
+
+<div data-childcomponent="Karel_functions__function_def" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_functions__function_def data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+def ime_funkcije():
+    naredba_1
+    ...
+    naredba_k
+</textarea>
+</div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Pri pisanju bilo koje funkcije na Pajtonu, reč <code class="docutils literal notranslate"><span class="pre">def</span></code> na početku, zagrade <code class="docutils literal notranslate"><span class="pre">()</span></code> i dvotačka <code class="docutils literal notranslate"><span class="pre">:</span></code> na kraju prvog reda su obvavezni. Kao <em>ime_funkcije</em> može se pojaviti bilo koje pravilno napisano ime koje mi izaberemo. Naredbe koje slede, pišu se uvučeno i čine telo funkcije (ako se piše više naredbi u jednom redu, onda se te naredbe razdvajaju znakom tačka-zarez). Naredbe u telu funkcije će se izvršiti svaki put kada se pri izvršavanju programa naiđe na ime funkcije, to jest kada ta funkcija bude pozvana.</p>
+
+    </p></div></div>
+<p>U skladu sa ovim pravilima, funkciju <em>nazad()</em> možemo da napišemo ovako:</p>
+
+<div data-childcomponent="Karel_functions__backwards_def" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_functions__backwards_def data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+def nazad():
+    levo(); levo()
+    napred()
+    levo(); levo()
+</textarea>
+</div>
+<p>Tada bi ceo program izgledao ovako:</p>
+
+<div data-childcomponent="Karel_functions__take_neighboring_ball_final" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_functions__take_neighboring_ball_final" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_functions__take_neighboring_ball_final" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+   setup:function() {
+      function random(n) {
+         return Math.floor(n * Math.random());
+      }
+
+      var ww = [
+         [
+            '█████',
+            '█0.0█',
+            '███.█',
+            '█1.N█',
+            '███.█',
+            '█0.0█',
+            '█████'
+         ],
+         [
+            '█████',
+            '█1.0█',
+            '█...█',
+            '█E.0█',
+            '█████'
+         ],
+         [
+            '███████',
+            '█0█0█0█',
+            '█.█.█.█',
+            '█0.W.0█',
+            '█.█.█.█',
+            '█0█1█0█',
+            '███████'
+         ]
+      ];
+      let choice = random(ww.length);
+      var w = ww[choice];
+      var ny = Math.floor(w.length / 2);
+      var nx = Math.floor(w[0].length / 2);
+      var world = new World(nx, ny);
+
+      for (let y = 1; y &lt;= ny; y++) {
+         let wy = 2*(ny-y) + 1;
+         for (let x = 1; x &lt;= nx; x++) {
+            let wx = 2*x - 1;
+            if (y &lt; ny && w[wy - 1].charAt(wx) == "█") world.addEWWall(x, y, 1);
+            if (x &lt; nx && w[wy].charAt(wx + 1) == "█") world.addNSWall(x, y, 1);
+            let c = w[wy].charAt(wx);
+            let pos = "SWEN".indexOf(c);
+            if (pos > -1) {
+               world.setRobotStartAvenue(x);
+               world.setRobotStartStreet(y);
+               world.setRobotStartDirection("SWEN".charAt(pos));
+            }
+            let d = w[wy].charCodeAt(wx);
+            if (d >= 48 && d &lt; 58) world.putBalls(x, y, d - 48);
+         }
+      }
+
+      var robot = new Robot();
+
+      var code = ["from karel import *",
+                  "def nazad():",
+                  "    levo(); levo()",
+                  "    napred()",
+                  "    levo(); levo()",
+                  "",
+                  "for i in range(4):",
+                  "    if moze_napred():",
+                  "        napred()",
+                  "        if ima_loptica_na_polju():",
+                  "            uzmi()",
+                  "        nazad()",
+                  "    levo()  # sledeci smer",
+                  ""];
+
+      return {robot:robot, world:world, code:code};
+   },
+
+   isSuccess: function(robot, world) {
+      return robot.getBalls() > 0;
+   }
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_functions__take_neighboring_ball_final)</p>
+</p></div></div>
+
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Kada neku logičku celinu izdvojimo u funkciju, možemo da pišemo programe koji su kraći i jasniji, jer smo problem razložili na delove koji su manje složeni.</p>
+<p>Još jedna prednost od pisanja funkcija je da ih lako možemo iskoristiti u drugim programima (ovde ćemo napisane funkcije povremeno kopirati, ali u realnom programiranju postoji bolji i jednostavniji način).</p>
+
+    </p></div></div>
+</div>
+<div class="section" id="izlazak-iz-funkcije-ili-petlje-pre-njenog-kraja">
+<h2>Izlazak iz funkcije ili petlje pre njenog kraja<a class="headerlink" href="#izlazak-iz-funkcije-ili-petlje-pre-njenog-kraja" title="Permalink to this headline">¶</a></h2>
+<p>U primeru traženja loptice na susednom polju, radi jednostavnosti programa smo odlučili da Karel i kad nađe lopticu, on nastavlja da je traži u preostalim smerovima. Postoji način da izbegnemo ovo nepotrebno izvršavanje preostalih naredbi.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Kada želimo da prekinemo izvršavanje petlje</strong>, pišemo specijalnu naredbu <code class="docutils literal notranslate"><span class="pre">break</span></code>. Efekat naredbe <em>break</em> je da „iskočimo” iz petlje i nastavimo izvršavanje programa od prve naredbe posle petlje.</p>
+<p>Naredbom <em>break</em> ćemo iskočiti iz najbliže (najuže) <em>for</em> ili <em>while</em> petlje koja sadrži ovu naredbu. Ako se <em>break</em> naredba nalazi u dve ili više ugnežđenih petlji, izvršavanje se nastavlja naredbom koja sledi posle unutrašnje (najuže) petlje.</p>
+
+    </p></div></div>
+<p>Koristeći naredbu <em>break</em>, mogli bismo glavni deo programa</p>
+
+<div data-childcomponent="Karel_functions__break_intro_1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_functions__break_intro_1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+for i in range(4):
+    if moze_napred():
+        napred()
+        if ima_loptica_na_polju():
+            uzmi()
+        nazad()
+    levo()  # sledeci smer
+</textarea>
+</div>
+<p>da prepravimo u:</p>
+
+<div data-childcomponent="Karel_functions__break_intro_2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_functions__break_intro_2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+for i in range(4):
+    if moze_napred():
+        napred()
+        if ima_loptica_na_polju():
+            uzmi()
+            break
+        nazad()
+    levo()  # sledeci smer
+</textarea>
+</div>
+<p>Na taj način se iz petlje izlazi čim je loptica pronađena i uzeta. Pošto posle ove petlje nema drugih naredbi, u ovom slučaju se izvršavanjem naredbe <em>break</em> završava i rad programa.</p>
+<hr class="docutils" />
+<p>Vrlo slično izlasku iz petlje, iz funkcije takođe možemo da izađemo pre nego što se sve njene naredbe izvrše.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Kada želimo da prekinemo izvršavanje funkcije</strong>, pišemo specijalnu naredbu <code class="docutils literal notranslate"><span class="pre">return</span></code>. Efekat naredbe <em>return</em> je da „iskočimo” iz funkcije i nastavimo izvršavanje programa od prve naredbe posle mesta odakle je funkcija pozvana.</p>
+<p>Naredbom <em>return</em> iskačemo iz funkcije bez obzira na to koliko petlji okružuje naredbu <em>return</em>.</p>
+
+    </p></div></div>
+<p>Od programa za uzimanje loptice na susednom polju možemo da napravimo funkciju. U tom slučaju bismo mogli da pišemo:</p>
+
+<div data-childcomponent="Karel_functions__return_intro" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_functions__return_intro data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+def uzmi_na_susednom_polju():
+    for i in range(4):
+        if moze_napred():
+            napred()
+            if ima_loptica_na_polju():
+                uzmi()
+                return # izlazak iz funkcije
+            nazad()
+        levo()  # sledeci smer
+
+uzmi_na_susednom_polju()
+</textarea>
+</div>
+</div>
+<div class="section" id="zadaci-za-vezbu">
+<h2>Zadaci za vežbu<a class="headerlink" href="#zadaci-za-vezbu" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ostavljaj-loptice-dok-ima-loptica-i-polja">
+<h3>Ostavljaj loptice dok ima loptica i polja<a class="headerlink" href="#ostavljaj-loptice-dok-ima-loptica-i-polja" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Karel na početku ima nekoliko loptica i treba da ih rasporedi duž puta po jednu na svako polje (počevši od polja na kome stoji) dokle je moguće. Karel prekida sa postavljanjem loptica kada naiđe na prepreku ili kada ostane bez loptica (šta god se pre dogodi). Pri tome nije važno da li će se Karel zaustaviti na poslednjem popunjenom, ili na prvom praznom polju.</p>
+
+    </p></div></div>
+<p>Predlog: Stavite jedan od ova dva uslova u <em>while</em> petlju, tako da se petlja završi kada uslov ne bude više ispunjen. Koristite <em>break</em> naredbu da izađete iz petlje ako drugi uslov nije ispunjen.</p>
+
+<div data-childcomponent="Karel_functions__put_balls_until_wall_or_no_more_balls" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_functions__put_balls_until_wall_or_no_more_balls" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_functions__put_balls_until_wall_or_no_more_balls" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x  {
+     setup:function() {
+         function random(n) {
+             return Math.floor(n * Math.random());
+         }
+         var choice = random(3); // need initial world to get rid of 'choice'
+         var N = [3, 4, 5];
+         var world = new World(N[choice], 1);
+         world.setRobotStartAvenue(1);
+         world.setRobotStartStreet(1);
+         world.setRobotStartDirection("E");
+
+         var robot = new Robot();
+         if (choice == 0) robot.setBalls(3);
+         if (choice == 1) robot.setBalls(6);
+         if (choice == 2) robot.setBalls(2);
+
+         var code = ["from karel import *",
+                     " # dopunite",
+                     ""];
+
+         //var code = ["from karel import *",
+         //            "while ima_loptica_kod_sebe():",
+         //            "    ostavi()",
+         //            "    if not moze_napred():",
+         //            "        break",
+         //            "    napred()",
+         //            ""];
+
+         return {robot:robot, world:world, code:code};
+     },
+
+     isSuccess: function(robot, world) {
+         var X = world.getAvenues();
+         var zeroBallsFound = false;
+         for (var x = 1; x &lt;= X; x++) {
+             var b = world.getBalls(x, 1);
+             if (b > 1) return false;
+             if (b == 1 && zeroBallsFound) return false;
+             if (b == 0) zeroBallsFound = true;
+         }
+
+        if (robot.getBalls() > 0 && zeroBallsFound)
+            return false;
+
+        return true;
+     },
+ } x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_functions__put_balls_until_wall_or_no_more_balls)</p>
+</p></div></div>
+
+</div>
+<div class="section" id="pomeri-sve-loptice-unazad">
+<h3>Pomeri sve loptice unazad<a class="headerlink" href="#pomeri-sve-loptice-unazad" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Ispred Karela je prav put nepoznate dužine. Na početnom polju nema loptica. Karel treba da svaku lopticu premesti za jedno polje ka levoj strani ekrana.</p>
+
+    </p></div></div>
+<p>Ovaj zadatak možete da rešite tako što, dok god ima polja ispred Karela, ponavljate sledeće korake:</p>
+<ul class="simple">
+<li><p>pređi na sledeće polje</p></li>
+<li><p>uzmi sve loptice sa tog polja</p></li>
+<li><p>idi korak nazad (to jest, okreni se dva puta i idi napred)</p></li>
+<li><p>ostavi sve loptice</p></li>
+<li><p>vrati se na polje sa kojeg si uzeo loptice</p></li>
+</ul>
+<p>Pri tome, za vraćanje na polje na koje Karel premešta loptice možete da koristite ranije napisanu funkciju <em>nazad()</em>. Treba samo da je iskopirate ili prepišete u prostor za rešavanje.</p>
+
+<div data-childcomponent="Karel_functions__all_balls_one_square_back" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_functions__all_balls_one_square_back" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_functions__all_balls_one_square_back" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x  {
+     setup:function() {
+        function random(n) {
+           return Math.floor(n * Math.random());
+        }
+        var choice = random(3); // need initial world to get rid of 'choice'
+        var N = [3, 4, 5];
+        var world = new World(N[choice], 1);
+        world.setRobotStartAvenue(1);
+        world.setRobotStartStreet(1);
+        world.setRobotStartDirection("E");
+
+        var B = 0;
+        if (Math.random() > 0.8) B = random(3);
+        if (choice == 0) {
+           world.putBalls(2, 1, B);
+           world.putBalls(3, 1, B + 2);
+        }
+        if (choice == 1) {
+           world.putBalls(2, 1, B);
+           world.putBalls(3, 1, B + 3);
+           world.putBalls(4, 1, B + 1);
+        }
+        if (choice == 2) {
+           world.putBalls(2, 1, B);
+           world.putBalls(3, 1, B + 2);
+           world.putBalls(4, 1, B + 1);
+           world.putBalls(5, 1, B + 0);
+        }
+
+        var robot = new Robot();
+
+        var code = ["from karel import *",
+                    "",
+                    "# kopirajte funkciju 'nazad'()",
+                    "",
+                    "while moze_napred():   # dok ima polja ispred Karela, ponavljaj",
+                    "    napred();              # idi napred",
+                    "    # dopunite             # pokupi sve loptice sa polja",
+                    "    # dopunite             # idi jedno polje nazad",
+                    "    # dopunite             # ostavi sve loptice",
+                    "    # dopunite             # vrati se napred na ispraznjeno polje",
+                    ""];
+
+        return {robot:robot, world:world, code:code};
+     },
+
+     isSuccess: function(robot, world) {
+        var N = world.getAvenues();
+        var B = world.getBalls(1, 1);
+        if (N == 3) {
+           if (world.getBalls(2, 1) != B + 2)
+             return false;
+        }
+        if (N == 4) {
+           if (world.getBalls(2, 1) != B + 3)
+             return false;
+           if (world.getBalls(3, 1) != B + 1)
+             return false;
+        }
+        if (N == 5) {
+           if (world.getBalls(2, 1) != B + 2)
+             return false;
+           if (world.getBalls(3, 1) != B + 1)
+             return false;
+           if (world.getBalls(4, 1) != B + 0)
+             return false;
+        }
+
+        if (world.getBalls(N, 1) != 0)
+           return false;
+
+        if (robot.getBalls() > 0)
+              return false;
+
+        return true;
+     },
+ } x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_functions__all_balls_one_square_back)</p>
+</p></div></div>
+
+
+    <div data-component="reveal" id="Karel_functions__all_balls_one_square_back_reveal"   data-showtitle="Rešenje" data-hidetitle="Sakrij rešenje">
+    
+<div data-childcomponent="Karel_functions__all_balls_one_square_back_solution" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Karel_functions__all_balls_one_square_back_solution data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+from karel import *
+def nazad():     # idi jedno polje nazad, ostani isto okrenut
+    levo(); levo();
+    napred();
+    levo(); levo();
+
+while moze_napred():   # dok ima polja ispred Karela, ponavljaj
+    napred();                     # idi na novo polje
+    while ima_loptica_na_polju(): # uzmi sve loptice na polju
+        uzmi()
+    nazad()                       # korak nazad
+    while ima_loptica_kod_sebe(): # ostavi sve loptice
+        ostavi()
+    napred()                      # idi na polje koje si ispraznio
+</textarea>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="prati-loptice">
+<h3>Prati loptice<a class="headerlink" href="#prati-loptice" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Na svakom polju se nalazi po jedna ili nijedna loptica. Polja sa lopticama formiraju put, koji počinje na polju pored Karela. Karel treba da prati taj put i da pokupi sve loptice.</p>
+
+    </p></div></div>
+<p>Predlog: radi rešavanja ovog zadatka možete da napišete funkciju <em>na_neprazno_susedno_polje()</em>, koja treba samo da premesti Karela na susedno polje na kome postoji loptica (pri tome naredba <em>return</em> može da bude korisna). Funkcija <em>na_neprazno_susedno_polje</em> treba da se razlikuje od ranije napisane funkcije <em>uzmi_na_susednom_polju()</em> samo po tome što ne uzima lopticu.</p>
+<p>Kada Karel pokupi sve loptice, sledeći poziv ove funkcije će ostaviti Karela na nekom praznom polju (to će biti polje na kome je Karel uzeo poslednju lopticu). Po tome što nema loptice na polju na kome se nalazi Karel, znaćemo da je Karel već uzeo sve loptice.</p>
+
+<div data-childcomponent="Karel_functions__follow_the_balls" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_functions__follow_the_balls" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_functions__follow_the_balls" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x  {
+     setup:function() {
+         function random(n) {
+             return Math.floor(n * Math.random());
+         }
+
+         var ww = [
+             [
+                '███████████',
+                '█0.0.1.1.0█',
+                '█.........█',
+                '█0.N.0.1.0█',
+                '█.........█',
+                '█0.1.1.1.0█',
+                '███████████'
+             ],
+             [
+                '███████████',
+                '█1.1.1.1.1█',
+                '█.........█',
+                '█1.0.0.0.1█',
+                '██........█',
+                '█S.1.1.1.1█',
+                '███████████'
+             ]
+         ];
+         let choice = random(ww.length);
+         var w = ww[choice];
+         var ny = Math.floor(w.length / 2);
+         var nx = Math.floor(w[0].length / 2);
+         var world = new World(nx, ny);
+
+         for (let y = 1; y &lt;= ny; y++) {
+             let wy = 2*(ny-y) + 1;
+             for (let x = 1; x &lt;= nx; x++) {
+                 let wx = 2*x - 1;
+                 if (y &lt; ny && w[wy - 1].charAt(wx) == "█") world.addEWWall(x, y, 1);
+                 if (x &lt; nx && w[wy].charAt(wx + 1) == "█") world.addNSWall(x, y, 1);
+                 let c = w[wy].charAt(wx);
+                 let pos = "SWEN".indexOf(c);
+                 if (pos > -1) {
+                     world.setRobotStartAvenue(x);
+                     world.setRobotStartStreet(y);
+                     world.setRobotStartDirection("SWEN".charAt(pos));
+                 }
+                 let d = w[wy].charCodeAt(wx);
+                 if (d >= 48 && d &lt; 58) world.putBalls(x, y, d - 48);
+             }
+         }
+
+         var robot = new Robot();
+
+         var code = ["from karel import *",
+                     "def nazad():",
+                     "    levo(); levo()",
+                     "    napred()",
+                     "    levo(); levo()",
+                     "",
+                     "def na_neprazno_susedno_polje():",
+                     "    # napisite funkciju",
+                     "",
+                     "na_neprazno_susedno_polje()",
+                     "while ??? # dodajte uslov",
+                     "    uzmi()",
+                     "    ??? # dopunite",
+                     ""];
+
+         //var code = ["from karel import *",
+         //            "def nazad():",
+         //            "    levo(); levo()",
+         //            "    napred()",
+         //            "    levo(); levo()",
+         //            "",
+         //            "def na_neprazno_susedno_polje():",
+         //            "    for i in range(4):",
+         //            "        if moze_napred():",
+         //            "            napred()",
+         //            "            if ima_loptica_na_polju():",
+         //            "                return",
+         //            "            nazad()",
+         //            "        levo()  # sledeci smer",
+         //            "",
+         //            "na_neprazno_susedno_polje()",
+         //            "while ima_loptica_na_polju():",
+         //            "    uzmi()",
+         //            "    na_neprazno_susedno_polje()",
+         //            ""];
+
+         return {robot:robot, world:world, code:code};
+     },
+
+     isSuccess: function(robot, world) {
+         var X = world.getAvenues();
+         var Y = world.getStreets();
+         for (var y = 1; y &lt;= Y; y++)
+             for (var x = 1; x &lt;= X; x++)
+                 if (world.getBalls(x, y) > 0)
+                     return false;
+
+         return true;
+     },
+ } x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_functions__follow_the_balls)</p>
+</p></div></div>
+
+</div>
+<div class="section" id="uzmi-sve-loptice-sa-cele-table">
+<h3>Uzmi sve loptice sa cele table<a class="headerlink" href="#uzmi-sve-loptice-sa-cele-table" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Karel je na početku okrenut ka severu (gore), a nalazi se u donjem levom uglu pravougaone table nepoznate veličine, bez unutrašnjih zidova. Na svakom polju može biti bilo koliko loptica. Karel treba da uzme sve loptice sa svih polja table.</p>
+
+    </p></div></div>
+<p>Predlog: Napišite funkciju <em>isprazni_red()</em>, pomoću koje Karel:</p>
+<ul class="simple">
+<li><p>okreće se na levo (na istoku, tj. desnoj strani ekrana, gledajući duž reda na čijem je početku)</p></li>
+<li><p>prolazi ceo red tabele i usput uzima sve loptice sa svakog polja iz tog reda, uključujući i prvo polje u redu, sa koga je krenuo</p></li>
+<li><p>okreće se ka početku reda (ka zapadu, tj. ka desnoj strani ekrana)</p></li>
+<li><p>vraća se na početak reda i okreće se na severu (gore), kao što je stajao pre poziva funkcije</p></li>
+</ul>
+<p>Program koji rešava zadatak pomoću ove funkcije nije dugačak. Potrebno je:</p>
+<ul class="simple">
+<li><p>isprazniti prvi red</p></li>
+<li><p>dok ima redova ispred Karela, ići na sledeći red i isprazniti ga</p></li>
+</ul>
+
+<div data-childcomponent="Karel_functions_take_all_balls_2D" class="karel_section course-box course-box-problem">
+    <div class="course-content">
+        <p>
+
+    <div data-component="karel" id="Karel_functions_take_all_balls_2D" class="karel_section">
+        <div class="karel_actions col-md-12 mb-2"><button class="btn btn-success run-button">Покрени програм</button>
+        <button class="btn btn-default reset-button">Врати на почетак</button>
+        <button class="btn btn-default blockly-button" style="display: inline-block;">Blockly</button></div>
+        <div style="overflow: hidden;" class="karel_actions col-md-12" >
+            <section class="col-md-12">
+                <article>
+                    <textarea class="codeArea" id="Karel_functions_take_all_balls_2D" name="code" rows="10" style="width: 100%;height:300px"></textarea>
+                    <textarea class="configArea" style="display:none"><!--x {
+   setup:function() {
+      function random(n) {
+         return Math.floor(n * Math.random());
+      }
+
+      var sizes = [1, 2, 3, 3, 4, 4, 4];
+      var numBalls = [0, 0, 1, 1, 1, 3];
+      var X = sizes[random(sizes.length)];
+      var Y = sizes[random(sizes.length)];
+      var world = new World(X, Y);
+      world.setRobotStartAvenue(1);
+      world.setRobotStartStreet(1);
+      world.setRobotStartDirection("N");
+
+      for (var col = 1; col &lt;= X; col++) {
+          for (var row = 1; row &lt;= Y; row++) {
+              let B = numBalls[random(numBalls.length)];
+              world.putBalls(col, row, B);
+          }
+      }
+
+      var robot = new Robot();
+
+      var code = ["from karel import *",
+                  "# dopunite",
+                  ""];
+     //var code = ["from karel import *
+     //            "def isprazni_red():",
+     //            "    desno()                            # okreni se ka kraju reda (ka istoku)",
+     //            "    while ima_loptica_na_polju():      # isprazni prvo polje u redu",
+     //            "        uzmi()",
+     //            "    while moze_napred():               # dok ima jos polja u redu",
+     //            "        napred()                           # predji na novo polje",
+     //            "        while ima_loptica_na_polju():      # isprazni novo polje",
+     //            "            uzmi()",
+     //            "        ",
+     //            "    desno(); desno()                   # okreni se ka pocetku reda (ka zapadu)",
+     //            "    while moze_napred():               # vrati se na pocetak reda",
+     //            "        napred()",
+     //            "    desno()                            # okreni se ka sledecem redu (ka severu)",
+     //            "",
+     //            "isprazni_red()                 # pokupi loptice iz prvog reda",
+     //            "while moze_napred():           # dok ima jos redova",
+     //            "    napred(); isprazni_red()   #     predji u sledeci red i isprazni ga",
+     //            ""];
+
+      return {robot:robot, world:world, code:code};
+     },
+
+     isSuccess: function(robot, world) {
+        var X = world.getAvenues();
+        var Y = world.getStreets();
+        for (var col = 1; col &lt;= X; col++) {
+           for (var row = 1; row &lt;= Y; row++) {
+              if (world.getBalls(col, row) > 0)
+                 return false;
+           }
+        }
+
+        return true;
+   },
+} x--></textarea>
+                </article>
+            </section>
+            <section class="col-md-12">
+                <article>
+                    <canvas class="world" style="border-style: solid; border-width: 2px; border-color: inherit; background: white;" width="300" height="300">
+                        <p>Please try loading this page in HTML5 enabled web browsers. All the latest versions of famous browsers such as Internet explorer, Chrome, Firefox, Opera support HTML5.</p>
+                    </canvas>
+                </article>
+            </section>
+        </div>
+    </div>
+    <p class="karel_caption karel_caption_text"> (Karel_functions_take_all_balls_2D)</p>
+</p></div></div>
+
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Naredba <em>if</em> - vežbanje' data-toggle="tooltip"><a href="01_Karel_08_if_practice.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Dodatna uputstva funkciji' data-toggle="tooltip"><a href="01_Karel_10_functions_params.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Naredba <em>if</em> - vežbanje' data-toggle="tooltip"><a href="01_Karel_08_if_practice.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Dodatna uputstva funkciji' data-toggle="tooltip"><a href="01_Karel_10_functions_params.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Složena grananja &#8212; Tekstualno programiranje u Pajtonu</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Skripte i for petlja" href="02_Console_10_scripting.html" />
+    <link rel="prev" title="Naredbe grananja" href="02_Console_08_if.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Tekstualno programiranje u Pajtonu</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="slozena-grananja">
+<h1>Složena grananja<a class="headerlink" href="#slozena-grananja" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="uzastopni-uslovi">
+<h2>Uzastopni uslovi<a class="headerlink" href="#uzastopni-uslovi" title="Permalink to this headline">¶</a></h2>
+<p>Ima zadataka u kojima, kada jedan uslov nije ispunjen, treba proveriti drugi, pa ako ni taj uslov ne važi onda se proverava treći itd. Da ne bismo pisali</p>
+
+<div data-childcomponent="console__more_branching_elif1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__more_branching_elif1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+if prvi_uslov:
+    naredba1
+else:
+    if drugi_uslov:
+        naredba2
+    else:
+        if treci_uslov:
+            naredba3
+        else:
+            if cetvrti_uslov:
+                naredba4
+            else:
+                naredba5
+</textarea>
+</div>
+<p>u Pajtonu koristimo specijalnu reč <code class="docutils literal notranslate"><span class="pre">elif</span></code>, koja stoji umesto <em>else:</em> i uvučenog <em>if</em> u sledećem redu. Tako dobijamo pregledniji zapis:</p>
+
+<div data-childcomponent="console__more_branching_elif2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__more_branching_elif2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+if prvi_uslov:
+    naredba1
+elif drugi_uslov:
+    naredba2
+elif treci_uslov:
+    naredba3
+elif cetvrti_uslov:
+    naredba4
+else:
+    naredba5
+</textarea>
+</div>
+<p>Napomena 1: Bilo koji broj uzastopnih <em>elif</em> naredbi se može upotrebiti na ovaj način.</p>
+<p>Napomena 2: Deo</p>
+
+<div data-childcomponent="console__more_branching_elif3" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__more_branching_elif3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+else:
+    naredba5
+</textarea>
+</div>
+<p>nije obavezan i može da se izostavi ako za njim nema potrebe.</p>
+<div class="section" id="primeri-i-zadaci">
+<h3>Primeri i zadaci<a class="headerlink" href="#primeri-i-zadaci" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Primer - indeks telesne mase:</strong></p>
+<p>Za brzu orijentaciju u vezi sa stepenom gojaznosti ili mršavosti koristi se indeks telesne mase (engl. body mass index, skraćeno bmi). Za izračunavanje indeksa telesne mase koristi se formula <span class="math notranslate nohighlight">\(bmi = {m \over {h \times h}}\)</span>, gde je <em>m</em> masa u kilogramima, a <em>h</em> visina u metrima. Tumačenja vrednosti <em>bmi</em> su sledeća:</p>
+<ul class="simple">
+<li><p>do 18.5: pothranjena osoba</p></li>
+<li><p>od 18.5 do 25: osoba normalne telesne mase</p></li>
+<li><p>od 25 do 30: osoba prekomerne telesne mase</p></li>
+<li><p>preko 30: gojazna osoba</p></li>
+</ul>
+<p>Napisati program koji učitava telesnu masu i visinu osobe, a zatim ispisuje kojoj kategoriji pripada ta osoba (granične vrednosti priključiti nižoj kategoriji).</p>
+
+    </p></div></div>
+<p>Jedno moguće rešenje je dato ispod. Razmislite o tome zašto nije neophodno koristiti složene uslove (reči <em>and</em>, <em>or</em>, <em>not</em>) u ovom rešenju.</p>
+
+<div data-childcomponent="console__more_branching_bmi" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__more_branching_bmi data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+m = float(input('Telesna masa: '))
+h = float(input('Telesna visina: '))
+bmi = m / (h*h)
+if bmi <= 18.5:
+    print('Pothranjena osoba.')
+elif bmi <= 25:
+    print('Osoba normalne telesne mase.')
+elif bmi <= 30:
+    print('Osoba prekomerne telesne mase.')
+else:
+    print('Gojazna osoba.')
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Zadatak - kategorije igrača:</strong></p>
+<p>Mladi košarkaši se na početku košarkaške sezone registruju u jednoj od uzrasnih kategorija, prema tome koliko godina pune u kalendarskoj godini u kojoj sezona počinje. Pravila registrovanja su sledeća:</p>
+<ul class="simple">
+<li><p>10 i manje - bez kategorije</p></li>
+<li><p>11 ili 12 godina - mlađi pioniri</p></li>
+<li><p>13 ili 14 godina - pioniri</p></li>
+<li><p>15 ili 16 godina - kadeti</p></li>
+<li><p>17 ili 18 godina - juniori</p></li>
+<li><p>19 i više godina - seniori</p></li>
+</ul>
+<p>Napisati program koji učitava koliko godina košarkaš puni u godini u kojoj se registruje, a ispisuje njegovu uzrasnu kategoriju.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__more_branching_categories" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__more_branching_categories data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+g = int(input("Koliko godina ima igrač: "))
+# dovrsite
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Zadatak - redni broj:</strong></p>
+<p>Napisati program koji učitava ceo broj od 1 do 6 (uključujući granice), a ispisuje odgovarajući redni broj slovima. Na primer, ako se učita broj 6, treba ispisati „šesti” (bez navodnika).</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__more_branching_ordinal" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__more_branching_ordinal data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+n = int(input("Unesite broj od 1 do 6: "))
+# dovrsite
+</textarea>
+</div>
+</div>
+</div>
+<div class="section" id="ugnezdena-grananja">
+<h2>Ugnežđena grananja<a class="headerlink" href="#ugnezdena-grananja" title="Permalink to this headline">¶</a></h2>
+<p>Ugnežđena grananja su <em>if</em> naredbe u granama drugih <em>if</em> naredbi. Ugnežđene (umetnute) <em>if</em> naredbe mogu da se nađu u jednoj, drugoj ili obe grane neke veće <em>if</em> naredbe. Ovakav način postavljanja <em>if</em> naredbi može ići do bilo koje dubine, ali treba imati na umu da programi na taj način mogu da postanu vrlo nepregledni i teški za tačno razumevanje i eventualne izmene kada je potrebno.</p>
+<p>U prvom primeru namerno dajemo program sa tri nivoa gnežđenja <em>if</em> naredbi, da biste lakše zamislili kako može da izgleda program sa još dublje ugnežđenim i dužim <em>if</em> naredbama. U ostalim primerima i zadacima ćemo se ograničiti na jedan nivo umetanja <em>if</em> naredbi.</p>
+<div class="section" id="id1">
+<h3>Primeri i zadaci<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Primer - nepoznato ime</strong></p>
+<p>U komšiluku ima osmoro dece koja su često zajedno. Njihova imena su: Ana, Bane, Vera, Goran, Dunja, Đorđe, Ema i Žarko. Ana, Bane, Vera i Goran idu na programersku sekciju, a Ana, Bane, Dunja i Đorđe na sportsku sekciju. Školska kuvarica je htela da pohvali jedno od dece, ali nije znala ime tog deteta.</p>
+<p>Napisati program koji postavlja tri pitanja, prihvata odgovore na ta pitanja (slovo ’d’ za da, a svaki drugi odgovor za ne) i ispisuje ime deteta o kome je reč. Pitanja koja program postavlja su:</p>
+<ul class="simple">
+<li><p>Da li je to devojčica</p></li>
+<li><p>Da li ide na sportsku sekciju</p></li>
+<li><p>Da li ide na programersku sekciju</p></li>
+</ul>
+
+    </p></div></div>
+
+<div data-childcomponent="console__more_branching_guess_who1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__more_branching_guess_who1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+devojcica = input("Da li je to devojčica: ") == 'd'
+sportista = input("Da li ide na sportsku sekciju: ") == 'd'
+programer = input("Da li ide na programersku sekciju: ") == 'd'
+if programer:
+    if sportista:
+        if devojcica:
+            print("Ana")
+        else:
+            print("Bane")
+    else:
+        if devojcica:
+            print("Vera")
+        else:
+            print("Goran")
+else:
+    if sportista:
+        if devojcica:
+            print("Dunja")
+        else:
+            print("Đorđe")
+    else:
+        if devojcica:
+            print("Ema")
+        else:
+            print("Žarko")
+</textarea>
+</div>
+<p>Primetimo da programi sa ugnežđenim grananjima mogu da se preprave tako da koriste samo uzastopne uslove i oblik sa „elif”, bez umetanja <em>if</em> naredbi u dubinu. Pri tome koristimo složene uslove, koje gradimo pomoću logičkih operacija <em>and</em>, <em>or</em> i <em>not</em>.</p>
+
+<div data-childcomponent="console__more_branching_guess_who2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__more_branching_guess_who2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+devojcica = input("Da li je to devojčica: ") == 'd'
+sportista = input("Da li ide na sportsku sekciju: ") == 'd'
+programer = input("Da li ide na programersku sekciju: ") == 'd'
+if programer and sportista and devojcica:
+    print("Ana")
+elif programer and sportista and not devojcica:
+    print("Bane")
+elif programer and not sportista and devojcica:
+    print("Vera")
+elif programer and not sportista and not devojcica:
+    print("Goran")
+elif not programer and sportista and devojcica:
+    print("Dunja")
+elif not programer and sportista and not devojcica:
+    print("Đorđe")
+elif not programer and not sportista and devojcica:
+    print("Ema")
+else:
+    print("Žarko")
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Zadatak - raskrsnica:</strong></p>
+<p>U novom naselju nalazi se raskrsnica velikih ulica A i B. Brojevi u ulici A su parni sa desne strane a neparni sa leve. Na parnoj strani brojevi do raskrsnice su od 2 do 200, a posle raskrsnice su veći od 200. Na neparnoj strani brojevi do raskrsnice su od 1 do 177, a posle raskrsnice su od 179 nadalje.</p>
+<p>Napisati program koji učitava jedan kućna broj u ulici A i odgovara da li je taj broj pre ili posle raskrsnice i sa koje strane ulice A. Na primer:</p>
+<ul class="simple">
+<li><p>za broj 128 ispisati „sa desne strane, pre raskrsnice”</p></li>
+<li><p>za broj 284 ispisati „sa desne strane, posle raskrsnice”</p></li>
+<li><p>za broj 177 ispisati „sa leve strane, pre raskrsnice”</p></li>
+<li><p>za broj 219 ispisati „sa leve strane, posle raskrsnice”</p></li>
+</ul>
+
+    </p></div></div>
+<p><strong>Pomoć:</strong> Nakon učitavanja, prvo treba proveriti da li je kućni broj <em>n</em> paran, to jest da li je <span class="math notranslate nohighlight">\(n \% 2 == 0\)</span>.</p>
+
+<div data-childcomponent="console__more_branching_quart" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__more_branching_quart data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+n = int(input("Koji je kućni broj: "))
+# dovrsite
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Zadatak - učenje:</strong></p>
+<p>Jovanovi roditelji su rekli Jovanu da ako dobije četvorke ili petice iz matematike i engleskog, može da ide popodnevni fudbalski turnir, u protivnom mora da uči predmet ili predmete iz kojih dobije ocene manje od 4.</p>
+<p>Napisati program koji prvo učitava Jovanovu ocenu iz matematike a zatim iz engleskog i ispisuje poruku za Jovana. Na primer:</p>
+<ul class="simple">
+<li><p>za ocene 2, 3 ispisati „uči i matematiku i engleski”</p></li>
+<li><p>za ocene 3, 4 ispisati „uči matematiku”</p></li>
+<li><p>za ocene 4, 2 ispisati „uči engleski”</p></li>
+<li><p>za ocene 5, 4 ispisati „idi na turnir”</p></li>
+</ul>
+
+    </p></div></div>
+
+<div data-childcomponent="console__more_branching_grades" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__more_branching_grades data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+mat = int(input("Koja je ocena iz matematike: "))
+eng = int(input("Koja je ocena iz engleskog: "))
+# dovrsite
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Zadatak - oblačenje:</strong></p>
+<p>Igor pravi program koji sa sajta za vremensku prognozu očitava trenutnu temperaturu (u stepenima Celzijusa) i šanse za kišu (od 0 do 100), pa na osnovu tih podataka ispisuje preporuku da li treba poneti jaknu (koja ima kapuljaču) ili kišobran, ili nijedno od ta dva. Igor je izabrao ovakvo pravilo:</p>
+<ul class="simple">
+<li><p>kada je temperatura niža od 21, savet neka glasi: „ponesi jaknu”</p></li>
+<li><p>kada je temperatura 21 ili viša a šanse za kišu preko 50, preporuka je: „ponesi kišobran”</p></li>
+<li><p>kada je temperatura 21 ili viša a šanse za kišu do 50, savet neka bude „možeš samo u majici”</p></li>
+</ul>
+<p>Vi napišite program koji učitava prvo temperaturu pa šanse za kišu, a zatim ispisuje preporuku.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="console__more_branching_weather" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__more_branching_weather data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+t = int(input("Koja je temperatura: "))
+sanse_kisa = int(input("Koje su šanse za kišu: "))
+# dovrsite
+</textarea>
+</div>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Naredbe grananja' data-toggle="tooltip"><a href="02_Console_08_if.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Skripte i <em>for</em> petlja' data-toggle="tooltip"><a href="02_Console_10_scripting.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Naredbe grananja' data-toggle="tooltip"><a href="02_Console_08_if.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Skripte i <em>for</em> petlja' data-toggle="tooltip"><a href="02_Console_10_scripting.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

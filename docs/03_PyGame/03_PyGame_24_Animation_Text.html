@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Crtanje teksta &#8212; Tekstualno programiranje u Pajtonu</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Kretanje više objekata" href="03_PyGame_25_Animation_Multiple.html" />
+    <link rel="prev" title="Animacija po fazama" href="03_PyGame_23_Animation_Stages.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Tekstualno programiranje u Pajtonu</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="crtanje-teksta">
+<h1>Crtanje teksta<a class="headerlink" href="#crtanje-teksta" title="Permalink to this headline">¶</a></h1>
+<p>Programi koji crtaju, često uz slike ispisuju i razne poruke (verovatno ste i sami videli mnogo primera). Evo kako se to radi u PajGejmu:</p>
+
+<div data-childcomponent="PyGame__anim_text" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_text data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="import pygame as pg, pygamebg
+(sirina, visina) = (500, 200)
+prozor = pygamebg.open_window(sirina, visina, &quot;Текст&quot;)
+
+font = pg.font.SysFont(&quot;Arial&quot;, 30) # font kojim će biti prikazan tekst
+
+tekst = &quot;Пример исписивања текста&quot;
+slika_teksta = font.render(tekst, True, pg.Color(&quot;green&quot;))
+x = (sirina - slika_teksta.get_width()) // 2
+y = (visina - slika_teksta.get_height()) // 2
+
+
+prozor.fill(pg.Color(&quot;black&quot;))
+prozor.blit(slika_teksta, (x, y))
+
+pygamebg.wait_loop()
+"   >
+
+
+</textarea>
+</div>
+<p>Kao što se vidi iz primera, da bi tekst mogao da bude prikazan, <strong>prvo treba kreirati objekat koji predstavlja font</strong>. Za to se koristi funkcija <code class="docutils literal notranslate"><span class="pre">pg.font.SysFont</span></code>, kojoj zadajemo vrstu i veličinu slova. Možemo da napravimo i više ovakvih objekata u slučaju da nameravamo da pišemo slovima različitih veličina ili tipova, a često nam je dovoljan i samo jedan font.</p>
+<p>Nakon pravljenja fonta, svaki put kada želimo da prikažemo neki tekst, ponavljamo sledeća dva koraka:</p>
+<ul class="simple">
+<li><p>Prvi korak je <strong>da se napravi slika koja sadrži željeni tekst.</strong> To postižemo pomoću funkcije <code class="docutils literal notranslate"><span class="pre">font.render</span></code>, gde je <em>font</em> objekat fonta kreiran na početku. Parametri funkcije <em>font.render</em> su redom tekst koji se prikazuje, logička vrednost koja određuje da li će se crtati lepšim linijama (tj. koristiti takozvana tehnika antialijasinga) i na kraju boja kojom će se tekst ispisivati.</p></li>
+<li><p>Drugi korak je isti kao kod prikazivanja bilo koje gotove slike - <strong>prikazujemo sliku dobijenu u prethodnom koraku</strong> na poziciji koju odaberemo. Pri tome za računanje pozicije možemo po potrebi (kao u primeru) da koristimo veličinu slike.</p></li>
+</ul>
+<div class="section" id="zadaci-svetlece-reklame">
+<h2>Zadaci - svetleće reklame<a class="headerlink" href="#zadaci-svetlece-reklame" title="Permalink to this headline">¶</a></h2>
+<p>Sigurno ste viđali svetleće reklame sa neonskim cevima u obliku slova. One privlače pažnju tako što se različite grupe slova uključuju i isključuju nekim zadatim redosledom koji se ponavlja. Sledi nekoliko primera inspirisanih takvim svetlećim reklamama.</p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Trepereći tekst:</strong> Napišite program koji prikazuje trepereći tekst, slično kao u primeru (dugme „Prikaži primer”).</p>
+<p>Ako želite, možete da promenite tekst, njegovu boju i veličinu, font, učestalost uključivanja i isključivanja, ili bilo šta drugo. Ako želite da što približnije oponašate naš program, on koristi slova tipa „Arial” veličine 80, a prikazuje tekst u svakom drugom frejmu, centriran, pri brzini od 3 frejma u sekundi.</p>
+
+    </p></div></div>
+<p><strong>Pomoć:</strong> Od globalnih promenljivih koje opisuju scenu, dovoljna je jedna logička promenljiva koja govori da li treba prikazati dati tekst. Ovoj promenljivoj ćemo u funkciji <em>nov_frejm()</em> menjati vrednost, tako da ona ima vrednost <em>True</em> u svakom drugom frejmu.</p>
+
+<div data-childcomponent="PyGame__anim_neon1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_neon1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+     data-includehsrc="import pygame as pg, pygamebg
+tekst = &quot;ПАЈТОН&quot;
+(sirina, visina) = (len(tekst) * 70, 100)
+prozor = pygamebg.open_window(sirina, visina, &quot;Реклама&quot;)
+
+font = pg.font.SysFont(&quot;Arial&quot;, 80) # font kojim će biti prikazan tekst
+slika_teksta = font.render(tekst, True, pg.Color(&quot;yellow&quot;))
+x = (sirina - slika_teksta.get_width()) // 2
+y = (visina - slika_teksta.get_height()) // 2
+svetli = True
+
+def nov_frejm():
+    global svetli    
+    svetli = not svetli
+    prozor.fill(pg.Color(&quot;black&quot;)) # bojimo pozadinu prozora u crno
+    if svetli: 
+        prozor.blit(slika_teksta, (x, y))
+
+pygamebg.frame_loop(3, nov_frejm)
+"  >
+import pygame as pg, pygamebg
+tekst = "PAJTON"
+(sirina, visina) = (len(tekst) * 70, 100)
+prozor = pygamebg.init(sirina, visina, "Reklama")
+</textarea>
+</div>
+
+    <div data-component="reveal" id="PyGame__anim_neon1_reveal"   data-showtitle="Prikaži rešenje" data-hidetitle="Sakrij rešenje">
+    <blockquote>
+<div>
+<div data-childcomponent="PyGame__anim_neon1_solution" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_neon1_solution data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="import pygame as pg, pygamebg
+tekst = &quot;ПАЈТОН&quot;
+(sirina, visina) = (len(tekst) * 70, 100)
+prozor = pygamebg.open_window(sirina, visina, &quot;Реклама&quot;)
+
+font = pg.font.SysFont(&quot;Arial&quot;, 80) # font kojim će biti prikazan tekst
+slika_teksta = font.render(tekst, True, pg.Color(&quot;yellow&quot;))
+x = (sirina - slika_teksta.get_width()) // 2
+y = (visina - slika_teksta.get_height()) // 2
+svetli = True
+
+def nov_frejm():
+    global svetli    
+    svetli = not svetli
+    prozor.fill(pg.Color(&quot;black&quot;)) # bojimo pozadinu prozora u crno
+    if svetli: 
+        prozor.blit(slika_teksta, (x, y))
+
+pygamebg.frame_loop(3, nov_frejm)
+"   >
+
+
+</textarea>
+</div>
+</div></blockquote>
+
+    </div>
+    
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Dodavanje slova:</strong> Probajte sada da imitirate ovaj primer. U prvom frejmu se prikazuje samo prvo slovo, a u svakom sledećem po jedno slovo više dok se ne prikažu sva slova. Nakon toga sledi jedan frejm u kome se ne prikazuje ništa, pa tri frejma sa svim uključenim slovima, a zatim se sve ponavlja. Brzina prikazivanja u našem programu je 2 frejma u sekundi.</p>
+
+    </p></div></div>
+<p><strong>Pomoć:</strong> evo nekih komentara koji mogu da pomognu pri rešavanju zadatka</p>
+<ul class="simple">
+<li><p>Iz opisa (i posmatranja primera) možemo da zaključimo da pun ciklus sadrži četiri frejma više nego što ima slova u tekstu.</p></li>
+<li><p>Potrebnu veličinu prozora možemo da odredimo na osnovu dužine teksta, kao u prethodnom primeru.</p></li>
+<li><p>Tekst se uvek prikazuje na istoj poziciji (isti je gornji levi ugao teksta). Prema tome, poziciju možemo da izračunamo jednom, u glavnom delu programa.</p></li>
+<li><p>Možemo da koristimo brojač frejmova kao globalnu promenljivu, pa u funkciji <em>nov_frejm()</em> pomoću <em>if</em> naredbi da na osnovu vrednosti brojača ustanovimo da li i koji deo teksta treba prikazati.</p></li>
+</ul>
+
+<div data-childcomponent="PyGame__anim_neon2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_neon2 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+     data-includehsrc="import pygame as pg, pygamebg
+
+tekst = &quot;ПАЈТОН&quot;
+br_slova = len(tekst)
+(sirina, visina) = (br_slova * 70, 100)
+prozor = pygamebg.open_window(sirina, visina, &quot;Реклама&quot;)
+
+# Imamo po jedan frejm za svako slovo, plus 
+# jedan frejm za iskljucivanje i tri za ukljucivanje svih slova
+br_frejmova = br_slova + 4
+
+font = pg.font.SysFont(&quot;Arial&quot;, 80) # font kojim će biti prikazan tekst
+
+# Svaki tekst se prikazuje na istoj poziciji, koju ovde izracunavamo
+slika_teksta = font.render(tekst, True, pg.Color(&quot;yellow&quot;))
+x = (sirina - slika_teksta.get_width()) // 2
+y = (visina - slika_teksta.get_height()) // 2
+i_frejm  = 0
+
+def nov_frejm():
+    global i_frejm
+    
+    prozor.fill(pg.Color(&quot;black&quot;)) 
+    if i_frejm &lt; br_slova: # ako treba ukljuciti neki pocetni deo teksta
+        slika_teksta = font.render(tekst[:i_frejm+1], True, pg.Color(&quot;yellow&quot;))
+        prozor.blit(slika_teksta, (x, y))
+    elif i_frejm == br_slova:
+        pass # ovo je frejm u kome se nista ne prikazuje
+    else:
+        # ovo je jedan od poslednja tri frejma, prikazuje se ceo tekst
+        slika_teksta = font.render(tekst, True, pg.Color(&quot;yellow&quot;))
+        prozor.blit(slika_teksta, (x, y))
+                
+    # pripremamo se za sledeci frejm
+    i_frejm = (i_frejm + 1) % br_frejmova
+
+pygamebg.frame_loop(2, nov_frejm)
+"  >
+
+
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Pojedinačna slova:</strong> U ovom primeru se prvo prikazuje svako slovo posebno, a zatim se sva slova 3 puta uključe i isključe. Možete li da ponovite ovo ponašanje?</p>
+
+    </p></div></div>
+<p><strong>Pomoć:</strong> pozicije prikazivanja pojedinih slova su redom (0, 0), (50, 0), (100, 0), (150, 0) itd. Broj frejmova u ciklusu je za 6 veći od broja slova u tekstu. Ostale ideje su vrlo slične onima iz prethodnih primera.</p>
+
+<div data-childcomponent="PyGame__anim_neon3" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_neon3 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+     data-includehsrc="import pygame as pg, pygamebg
+
+tekst = &quot;ПАЈТОН&quot;
+br_slova = len(tekst)
+# po jedan frejm za svako slovo, plus 3 puta po dva frejma za treperenje
+# (treperenje sadrzi jedan frejm sa svim slovima i jedan bez slova)
+br_frejmova = br_slova + 6
+
+(sirina, visina) = (br_slova * 70, 100)
+prozor = pygamebg.open_window(sirina, visina, &quot;Реклама&quot;)
+
+x = [0]                   # x koordinata prvog slova
+for i in range(1, br_slova):
+    x.append(x[-1] + 70)  # svako sledece slovo je 70 piksela desno
+y = 0 # y koordinate svih slova
+font = pg.font.SysFont(&quot;Arial&quot;, 80) # font kojim će biti prikazan tekst
+
+i_frejm  = 0
+
+def nov_frejm():
+    global i_frejm
+    
+    prozor.fill(pg.Color(&quot;black&quot;)) # bojimo pozadinu prozora u crno
+    if i_frejm &lt; br_slova: # ako treba ukljuciti jedno slovo
+        slika_teksta = font.render(tekst[i_frejm], True, pg.Color(&quot;yellow&quot;))
+        prozor.blit(slika_teksta, (x[i_frejm], y))
+    else:
+        # ovo je jedan od frejmova za treperenje, 
+        # a u svakom drugom od njih treba da svetle sva slova
+        if i_frejm % 2 == 0: # ako treba ukljuciti sva slova
+            for i_slovo in range(br_slova):
+                slika_teksta = font.render(tekst[i_slovo], True, pg.Color(&quot;yellow&quot;))
+                prozor.blit(slika_teksta, (x[i_slovo], y))
+                
+    # pripremamo se za sledeci frejm
+    i_frejm = (i_frejm + 1) % br_frejmova
+
+pygamebg.frame_loop(3, nov_frejm)
+"  >
+
+
+</textarea>
+</div>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p><strong>Pokretna slova:</strong> Ovaj primer je drugačiji po tome što se slova pomeraju. Pokušajte i njega da realizujete.</p>
+
+    </p></div></div>
+<p><strong>Pomoć:</strong> Jednom kada formirate sliku od datog teksta, zadatak postaje vrlo sličan zadatku sa autom koji se kreće.</p>
+
+<div data-childcomponent="PyGame__anim_neon4" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_neon4 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+     data-includehsrc="import pygame as pg, pygamebg
+tekst = &quot;ПАЈТОН&quot;
+(sirina, visina) = (400, 100)
+prozor = pygamebg.open_window(sirina, visina, &quot;Реклама&quot;)
+
+font = pg.font.SysFont(&quot;Arial&quot;, 80) # font kojim će biti prikazan tekst
+slika_teksta = font.render(tekst, True, pg.Color(&quot;yellow&quot;))
+x = sirina
+y = (visina - slika_teksta.get_height()) // 2
+
+
+def nov_frejm():
+    global x
+    x = x - 2
+    if x + slika_teksta.get_width() &lt; 0:
+        x = sirina
+    prozor.fill(pg.Color(&quot;black&quot;)) # bojimo pozadinu prozora u crno
+    prozor.blit(slika_teksta, (x, y))
+
+pygamebg.frame_loop(60, nov_frejm)
+"  >
+
+
+</textarea>
+</div>
+<p>Na kraju, ako želite, ovde možete da napravite svetleću reklamu po vašoj želji.</p>
+
+<div data-childcomponent="PyGame__anim_neon5" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__anim_neon5 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+       >
+
+
+</textarea>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Animacija po fazama' data-toggle="tooltip"><a href="03_PyGame_23_Animation_Stages.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Kretanje više objekata' data-toggle="tooltip"><a href="03_PyGame_25_Animation_Multiple.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Animacija po fazama' data-toggle="tooltip"><a href="03_PyGame_23_Animation_Stages.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Kretanje više objekata' data-toggle="tooltip"><a href="03_PyGame_25_Animation_Multiple.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Promena veličine crteža &#8212; Tekstualno programiranje u Pajtonu</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Izrada crteža pomoću petlji" href="03_PyGame_16a_Drawing_Using_Loops1.html" />
+    <link rel="prev" title="Pomeranje crteža" href="03_PyGame_14_Drawing_Movable.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Tekstualno programiranje u Pajtonu</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="promena-velicine-crteza">
+<h1>Promena veličine crteža<a class="headerlink" href="#promena-velicine-crteza" title="Permalink to this headline">¶</a></h1>
+<p>Kada smo govorili o pomeranju crteža, pomenuli smo da je bolje da se sva računanja obave u programu, jer je tako jednostavnije da se po potrebi ceo crtež pomeri ili nacrta na više mesta. Slična je situacija ako je potrebno da crtež bude manji, ili veći, ili da se nacrta na više mesta u različitim veličinama. Umesto računanja svih koordinata ispočetka, pri programskom računanju može biti dovoljno da se promeni jedan jedini broj, pa da dobijemo crtež druge veličine.</p>
+<p>Da bismo naučili kako da pravimo crteže kojima veličina može lako da se menja, hajde prvo da vidimo šta sve treba da se promeni u nekom programu za crtanje, pa da crtež bude neke druge određene veličine. Na primer, ako smo nacrtali oblak pomoću ovih naredbi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span>     <span class="nf">oblak</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">siva</span><span class="p">):</span>
+    <span class="c1"># crtamo oblak od tri kruga</span>
+    <span class="n">boja</span> <span class="o">=</span> <span class="p">(</span><span class="n">siva</span><span class="p">,</span> <span class="n">siva</span><span class="p">,</span> <span class="n">siva</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">boja</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span>      <span class="n">y</span><span class="p">),</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">boja</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">50</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="mi">30</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">boja</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="mi">30</span><span class="p">)</span>
+
+<span class="n">oblak</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>i sada želimo da oblak bude dvostruko manji, a da mu sredina i dalje bude u tački (200, 200), onda bismo funkciju datu gore izmenili u:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">oblak</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">siva</span><span class="p">):</span>
+    <span class="c1"># crtamo oblak od tri kruga</span>
+    <span class="n">boja</span> <span class="o">=</span> <span class="p">(</span><span class="n">siva</span><span class="p">,</span> <span class="n">siva</span><span class="p">,</span> <span class="n">siva</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">boja</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span>      <span class="n">y</span><span class="p">),</span> <span class="mi">25</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">boja</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">25</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="mi">15</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">boja</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">25</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Treba smanjiti poluprečnike sva tri kruga na pola prethodne veličine (25 piksela umesto 50, a 15 umesto 30), ali to nije dovoljno. Ako bi centri malih krugova ostali gde su bili, dobili bismo tri razdvojena kruga (isprobajte). Da bi crtež i dalje ličio na oblak, potrebno je i da krugove međusobno približimo. Preciznije rečeno, rastojanja centara manjih krugova od centra velikog kruga treba takođe da budu dva puta manja nego pre, to jest po 25 umesto po 50 piksela.</p>
+<p>U opštem slučaju ne želimo uvek dvostruko manji oblak nego da oblaci mogu da budu različitih veličina. Osim toga, ne želimo da za svaku veličinu oblaka pravimo posebnu funkciju, nego da imamo jednu funkciju koja može da crta oblak zadate veličine. Najudobnije bi bilo da možemo veličinu oblaka da zadajemo samo jednim brojem i da promenom tog jednog broja menjamo veličinu oblaka. Da bismo to postigli, potrebno je da sve veličine koje se menjaju sa promenom veličine oblaka (a to su rastojanja između centara krugova i poluprečnici tih krugova) izrazimo pomoću jedne veličine. Možemo na primer za tu jednu veličinu da uzmemo poluprečnik srednjeg kruga, koji ćemo da označimo sa <span class="math notranslate nohighlight">\(r\)</span>. Rastojanja centara manjih krugova do centra većeg kruga su jednaka upravo po <span class="math notranslate nohighlight">\(r\)</span>, a poluprečnik manjih krugova je jednak <span class="math notranslate nohighlight">\({3 \over 5} r\)</span> bez obzira na veličinu oblaka. Kada iskoristimo sve ove veze koje smo uočili, funkcija dobija sledeći izgled:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">oblak</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">siva</span><span class="p">):</span>
+    <span class="c1"># crtamo oblak od tri kruga</span>
+    <span class="n">boja</span> <span class="o">=</span> <span class="p">(</span><span class="n">siva</span><span class="p">,</span> <span class="n">siva</span><span class="p">,</span> <span class="n">siva</span><span class="p">)</span>
+    <span class="n">r_malo</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">r</span> <span class="o">/</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">boja</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span>     <span class="n">y</span><span class="p">),</span> <span class="n">r</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">boja</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">r_malo</span><span class="p">)</span>
+    <span class="n">pg</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">boja</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">r_malo</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Funkcija ima jedan parametar više, tako da osim položaja i nijanse sive boje, ovoj funkciji zadajemo i veličinu oblaka. Sada možemo da pravimo i ovakve crteže:</p>
+
+<div data-childcomponent="PyGame__drawing_clouds_scalable" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__drawing_clouds_scalable data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="# -*- acsection: general-init -*-
+import pygame as pg, pygamebg
+prozor = pygamebg.open_window(400, 400, &quot;Облаци&quot;)
+# -*- acsection: main -*-
+
+# bojimo pozadinu u plavo
+prozor.fill(pg.Color(&quot;skyblue&quot;))
+
+# crtamo sunce
+pg.draw.circle(prozor, pg.Color(&quot;yellow&quot;), (100, 100), 80)
+
+# procedura koja crta oblak na datoj poziciji, date velicine
+# u datoj nijansi sive boje
+def oblak(x, y, r, siva):
+    # crtamo oblak od tri kruga
+    boja = (siva, siva, siva)
+    pg.draw.circle(prozor, boja, (x, y), r)
+    r_malo = round(3 * r / 5)
+    pg.draw.circle(prozor, boja, (x - r, y), r_malo)
+    pg.draw.circle(prozor, boja, (x + r, y), r_malo)
+
+oblak(240, 200, 40, 180)
+oblak(270, 250, 50, 210)
+oblak(230, 100, 50, 230)
+oblak( 80,  80, 30, 190)
+oblak(110, 320, 60, 255)
+oblak(280,  70, 20, 210)
+oblak(310,  80, 15, 220)
+oblak(330,  55, 15, 240)
+
+# -*- acsection: after-main -*-
+pygamebg.wait_loop()
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+<p>Hajde da sada nabrojimo korake za uopšteni postupak, kojim bismo prepravili crtanje bilo kog pomičnog crteža tako da mu se može menjati i veličina:</p>
+<ul class="simple">
+<li><p>Treba da odredimo jednu dužinu na crtežu, koja će da se zadaje direktno. Ovu izabranu dužinu možemo da nazovemo <strong>osnovna dužina</strong> ili <strong>jedinica mere</strong>. U primeru oblaka, osnovna dužina je poluprečnik srednjeg kruga.</p></li>
+<li><p>Sve poluprečnike krugova od kojih se crtež sastoji izražavamo srazmerno osnovnoj dužini. To znači da, ako je naša osnovna dužina označena sa <span class="math notranslate nohighlight">\(a\)</span>, sve druge dužine u programu će biti neki broj pomnožen sa <span class="math notranslate nohighlight">\(a\)</span>, na primer <span class="math notranslate nohighlight">\(2a\)</span> ili <span class="math notranslate nohighlight">\(5a\)</span>. Ovaj broj određujemo iz odnosa tražene dužine i izabrane osnovne dužine na početnom crtežu (taj odnos ostaje isti i kada se veličina crteža promeni). U primeru sa oblakom, poluprečnik malog kruga je uvek <span class="math notranslate nohighlight">\({3 \over 5}\)</span> izabrane osnovne dužine <span class="math notranslate nohighlight">\(r\)</span>. Ako se na crtežu pojavljuju i pravougaonici ili elipse, dužine i širine tih pravougaonika i elipsi takođe treba da izrazimo srazmerno osnovnoj dužini, na isti način kao i poluprečnike krugova.</p></li>
+<li><p>Koordinate svih tačaka određujemo u odnosu na glavnu tačku, tako što <span class="math notranslate nohighlight">\(x\)</span> i <span class="math notranslate nohighlight">\(y\)</span> koordinati glavne tačke dodajemo ili oduzimamo određeni broj osnovnih dužina. Potreban broj osnovnih dužina se i u ovom slučaju određuje iz odnosa na početnom crtežu. U primeru sa oblakom, da bismo dobili <span class="math notranslate nohighlight">\(x\)</span> koordinatu centra levog kruga, od <span class="math notranslate nohighlight">\(x\)</span> koordinate glavne tačke (centra srednjeg kruga) oduzimamo <strong>jednu</strong> osnovnu dužinu, jer je odnos razlike <span class="math notranslate nohighlight">\(x\)</span> koordinata i osnovne dužine jednak jedan. Isti postupak se u principu primenjuje i na <span class="math notranslate nohighlight">\(y\)</span> koordinate, mada je u ovom slučaju to posebno jednostano. Kako su <span class="math notranslate nohighlight">\(y\)</span> koordinate centara krugova iste, odnos razlike <span class="math notranslate nohighlight">\(y\)</span> koordinata i osnovne dužine je nula, pa na <span class="math notranslate nohighlight">\(y\)</span> koordinatu sidra treba dodati nula osnovnih dužina da bismo dobili <span class="math notranslate nohighlight">\(y\)</span> koordinatu centra manjeg kruga.</p></li>
+</ul>
+<p>Da bismo bolje razumeli postupak promene veličine crteža, primenićemo ga i na primeru medvedića.</p>
+<div class="section" id="meda-velicina">
+<h2>Meda - veličina<a class="headerlink" href="#meda-velicina" title="Permalink to this headline">¶</a></h2>
+<p>Dat je sledeći program, koji prikazuje glavu medvedića igračke, tako da se ona lako može premeštati:</p>
+
+<div data-childcomponent="PyGame__drawing_bear_movable" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__drawing_bear_movable data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="# -*- acsection: general-init -*-
+import pygame as pg, pygamebg
+(sirina, visina) = (500, 300)
+prozor = pygamebg.open_window(sirina, visina, &quot;Медведић&quot;)
+# -*- acsection: main -*-
+
+# bojimo pozadinu prozora u belo
+prozor.fill(pg.Color(&quot;white&quot;))
+
+def uokviren_krug(prozor, boja, centar, poluprecnik):
+    pg.draw.circle(prozor, boja, centar, poluprecnik)
+    pg.draw.circle(prozor, pg.Color(&quot;black&quot;), centar, poluprecnik, 1)
+
+def crtaj_medu(cx, cy):
+    uokviren_krug(prozor, pg.Color(&quot;yellow&quot;), (cx - 60,  cy - 70),  45) # levo uvo
+    uokviren_krug(prozor, pg.Color(&quot;yellow&quot;), (cx + 60,  cy - 70),  45) # desno uvo
+    uokviren_krug(prozor, pg.Color(&quot;yellow&quot;), (cx,       cy),      100) # glava
+    uokviren_krug(prozor, pg.Color(&quot;yellow&quot;), (cx,       cy + 50),  50) # njuska
+    uokviren_krug(prozor, pg.Color(&quot;black&quot;),  (cx - 50,  cy - 30),  15) # levo oko
+    uokviren_krug(prozor, pg.Color(&quot;black&quot;),  (cx + 50,  cy - 30),  15) # desno oko
+    uokviren_krug(prozor, pg.Color(&quot;black&quot;),  (cx,       cy + 20),  15) # vrh njuske
+
+crtaj_medu(sirina // 2, visina // 2)
+
+# -*- acsection: after-main -*-
+pygamebg.wait_loop()
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+<p>Da bismo mogli da menjamo veličinu crteža, uvedimo osnovnu dužinu, na primer <span class="math notranslate nohighlight">\(a = 5\)</span>. Sada sve poluprečnike možemo da izrazimo pomoću <span class="math notranslate nohighlight">\(a\)</span> ovako:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">uokviren_krug</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;yellow&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">cx</span> <span class="o">-</span> <span class="mi">60</span><span class="p">,</span>  <span class="n">cy</span> <span class="o">-</span> <span class="mi">70</span><span class="p">),</span>  <span class="mi">9</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="c1"># levo uvo</span>
+<span class="n">uokviren_krug</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;yellow&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">cx</span> <span class="o">+</span> <span class="mi">60</span><span class="p">,</span>  <span class="n">cy</span> <span class="o">-</span> <span class="mi">70</span><span class="p">),</span>  <span class="mi">9</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="c1"># desno uvo</span>
+<span class="n">uokviren_krug</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;yellow&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">cx</span><span class="p">,</span>       <span class="n">cy</span><span class="p">)</span>     <span class="p">,</span> <span class="mi">20</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="c1"># glava</span>
+<span class="n">uokviren_krug</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;yellow&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">cx</span><span class="p">,</span>       <span class="n">cy</span> <span class="o">+</span> <span class="mi">50</span><span class="p">),</span> <span class="mi">10</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="c1"># njuska</span>
+<span class="n">uokviren_krug</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="n">cx</span> <span class="o">-</span> <span class="mi">50</span><span class="p">,</span>  <span class="n">cy</span> <span class="o">-</span> <span class="mi">30</span><span class="p">),</span>  <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="c1"># levo oko</span>
+<span class="n">uokviren_krug</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="n">cx</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span>  <span class="n">cy</span> <span class="o">-</span> <span class="mi">30</span><span class="p">),</span>  <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="c1"># desno oko</span>
+<span class="n">uokviren_krug</span><span class="p">(</span><span class="n">prozor</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="n">cx</span><span class="p">,</span>       <span class="n">cy</span> <span class="o">+</span> <span class="mi">20</span><span class="p">),</span>  <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="p">)</span> <span class="c1"># vrh njuske</span>
+</pre></div>
+</div>
+<p>Kao osnovna dužina se može izabrati bilo koji broj, a izborom osnovne dužine od 5 piksela, postigli smo da ne moramo da koristimo realne brojeve - svi poluprečnici su celobrojni umnošci od <span class="math notranslate nohighlight">\(a\)</span> i možemo lako da ih izračunamo napamet. Na primer, poluprečnik od 45 pikesla izražavamo kao <span class="math notranslate nohighlight">\(45=9 \cdot 5 = 9 \cdot a\)</span>, i tako dalje.</p>
+<p>Sada je potrebno da koordinate centara svih ostalih krugova izrazimo polazeći od glavne tačke <span class="math notranslate nohighlight">\((cx, cy)\)</span>, pomerajući se za potreban broj dužina <span class="math notranslate nohighlight">\(a\)</span> u smeru <span class="math notranslate nohighlight">\(x\)</span> i <span class="math notranslate nohighlight">\(y\)</span> ose. Uzmimo kao primer desno uvo medvedića.</p>
+<p><span class="math notranslate nohighlight">\(x\)</span> koordinata centra desnog uveta je <span class="math notranslate nohighlight">\(cx + 60 = cx + 12 a\)</span>, dok je <span class="math notranslate nohighlight">\(y\)</span> koordinata <span class="math notranslate nohighlight">\(cy - 70 = cy - 14 a\)</span>. Kada ovo uradimo za sve centre krugova, dolazimo do sledećeg oblika programa:</p>
+
+<div data-childcomponent="PyGame__drawing_bear_tmp2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__drawing_bear_tmp2 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="# -*- acsection: general-init -*-
+import pygame as pg, pygamebg
+(sirina, visina) = (300, 300)
+prozor = pygamebg.open_window(sirina, visina, &quot;Медведић&quot;)
+
+# -*- acsection: main -*-
+# bojimo pozadinu prozora u belo
+prozor.fill(pg.Color(&quot;white&quot;))
+
+def uokviren_krug(prozor, boja, centar, poluprecnik):
+    pg.draw.circle(prozor, boja, centar, poluprecnik)
+    pg.draw.circle(prozor, pg.Color(&quot;black&quot;), centar, poluprecnik, 1)
+
+def crtaj_medu(cx, cy, a):
+    uokviren_krug(prozor, pg.Color(&quot;yellow&quot;), (cx - 12*a,  cy - 14*a),  9*a) # levo uvo
+    uokviren_krug(prozor, pg.Color(&quot;yellow&quot;), (cx + 12*a,  cy - 14*a),  9*a) # desno uvo
+    uokviren_krug(prozor, pg.Color(&quot;yellow&quot;), (cx,         cy),        20*a) # glava
+    uokviren_krug(prozor, pg.Color(&quot;yellow&quot;), (cx,         cy + 10*a), 10*a) # njuska
+    uokviren_krug(prozor, pg.Color(&quot;black&quot;),  (cx - 10*a,  cy - 6*a),   3*a) # levo oko
+    uokviren_krug(prozor, pg.Color(&quot;black&quot;),  (cx + 10*a,  cy - 6*a),   3*a) # desno oko
+    uokviren_krug(prozor, pg.Color(&quot;black&quot;),  (cx,         cy + 4*a),   3*a) # vrh njuske
+
+crtaj_medu(sirina // 2, visina // 2, 6)
+
+# -*- acsection: after-main -*-
+pygamebg.wait_loop()
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+<p>Sada možemo ne samo da premeštamo ili kopiramo medvedića po ekranu, nego i da ga prikazujemo u raznim veličinama. Kao potvrdu da menjanje veličine zaista radi, možete poziv funkcije</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">crtaj_medu</span><span class="p">(</span><span class="n">sirina</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">visina</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>koja crta medvedića sa glavnom tačkom u centru prozora, da zamenite sa sledećih pet:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">crtaj_medu</span><span class="p">(</span><span class="mi">85</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">crtaj_medu</span><span class="p">(</span><span class="mi">235</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">crtaj_medu</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">crtaj_medu</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">crtaj_medu</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Iskopirajte ili prepišite ovih pet linija koda u program i isprobajte! Razmislite koliko bi posla bilo da se ovih pet medvedića prikažu bez računanja u programu.</p>
+<p>Pokušajte sada da dovršite jedan započeti primer.</p>
+</div>
+<div class="section" id="zadatak-velicina-kuce">
+<h2>Zadatak - veličina kuće<a class="headerlink" href="#zadatak-velicina-kuce" title="Permalink to this headline">¶</a></h2>
+<p>Počećemo od programa koji crta četiri kućice na zadatim mestima na ekranu:</p>
+
+<div data-childcomponent="PyGame__drawing_house_detailed1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__drawing_house_detailed1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+    data-includesrc="# -*- acsection: general-init -*-
+import pygame as pg, pygamebg
+prozor = pygamebg.open_window(500, 300, &quot;Кућа&quot;)
+
+# -*- acsection: main -*-
+prozor.fill(pg.Color(&quot;darkgreen&quot;)) # bojimo pozadinu ekrana u tamno zeleno
+
+def kuca(x, y, boja_zidova):
+    pg.draw.polygon(prozor, pg.Color(&quot;red&quot;), [(x, y), (x+70, y-50), (x+140, y)]) # krov
+    pg.draw.rect(prozor, boja_zidova,       (x,       y,     140, 100)) # kuca
+    pg.draw.rect(prozor, pg.Color(&quot;brown&quot;), (x +  10, y + 20, 30,  30)) # levi prozor
+    pg.draw.rect(prozor, pg.Color(&quot;brown&quot;), (x + 100, y + 20, 30,  30)) # desni prozor
+    pg.draw.rect(prozor, pg.Color(&quot;brown&quot;), (x +  50, y + 30, 40,  70)) # vrata
+    
+kuca(150,  90, (220, 220, 220))
+kuca(220, 130, pg.Color(&quot;white&quot;))
+kuca(350, 160, (255, 255, 150))
+kuca( 50, 150, pg.Color(&quot;khaki&quot;))
+
+# -*- acsection: after-main -*-
+pygamebg.wait_loop()
+"   data-enablecopy="true">
+
+
+</textarea>
+</div>
+<p>Dovršite prepravku programa u polju ispod, tako da kućice mogu jednostavno da se povećavaju i smanjuju. Za osnovnu veličinu možete da uzmete na primer 10 piksela, jer je u tom slučaju izražavanje svih dužina pomoću osnovne dužine vrlo jednostavno. Kada potvrdite da program nakon prepravke prikazuje istu sliku kao i polazni program koji je dat gore, zamenite date pozive funkcije <em>kuca</em> sa sledeća 4, i tako proverite da li promena veličine kuće radi kako treba (treba da dobijete sliku kao pri kliku na dugme „Prikaži primer”):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kuca</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span>  <span class="mi">90</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">220</span><span class="p">))</span>
+<span class="n">kuca</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">))</span>
+<span class="n">kuca</span><span class="p">(</span><span class="mi">350</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">150</span><span class="p">))</span>
+<span class="n">kuca</span><span class="p">(</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">pg</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;khaki&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+
+<div data-childcomponent="PyGame__drawing_house_scalable1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=PyGame__drawing_house_scalable1 data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+      data-includexsrc="# -*- acsection: general-init -*-
+import pygame as pg, pygamebg
+prozor = pygamebg.open_window(500, 300, &quot;Кућа&quot;)
+# -*- acsection: main -*-
+prozor.fill(pg.Color(&quot;darkgreen&quot;)) # bojimo pozadinu ekrana u tamno zeleno
+
+def kuca(x, y, a, boja_zidova):
+    pg.draw.polygon(prozor, pg.Color(&quot;red&quot;), [(x, y), (x+7*a, y-5*a), (x+14*a, y)]) # krov
+    pg.draw.rect(prozor, boja_zidova,       (x,        y,      14*a, 10*a)) # kuca
+    pg.draw.rect(prozor, pg.Color(&quot;brown&quot;), (x +  1*a, y + 2*a, 3*a,  3*a)) # levi prozor
+    pg.draw.rect(prozor, pg.Color(&quot;brown&quot;), (x + 10*a, y + 2*a, 3*a,  3*a)) # desni prozor
+    pg.draw.rect(prozor, pg.Color(&quot;brown&quot;), (x +  5*a, y + 3*a, 4*a,  7*a)) # vrata
+
+kuca(150,  90,  8, (220, 220, 220))
+kuca(250, 130,  9, pg.Color(&quot;white&quot;))
+kuca(350, 160, 10, (255, 255, 150))
+kuca( 50, 150, 10, pg.Color(&quot;khaki&quot;))
+
+# -*- acsection: after-main -*-
+pygamebg.wait_loop()
+" data-enablecopy="true">
+prozor.fill(pg.Color("darkgreen")) # bojimo pozadinu ekrana u tamno zeleno
+
+def kuca(x, y, a, boja_zidova):
+    pg.draw.polygon(prozor, pg.Color("red"), [(x, y), (x + ???*a, y - ???*a), (x+14*a, y)]) # krov
+    pg.draw.rect(prozor, boja_zidova,       (x,       y,      14*a, 10*a)) # kuca
+    pg.draw.rect(prozor, pg.Color("brown"), (x + ???, y + ???, 3*a,  3*a)) # levi prozor
+    pg.draw.rect(prozor, pg.Color("brown"), (x + ???, y + ???, ???,  ???)) # desni prozor
+    pg.draw.rect(prozor, pg.Color("brown"), (x + ???, y + ???, ???,  ???)) # vrata
+
+kuca(150,  90, 10, (220, 220, 220))
+kuca(220, 130, 10, pg.Color("white"))
+kuca(350, 160, 10, (255, 255, 150))
+kuca( 50, 150, 10, pg.Color("khaki"))
+</textarea>
+</div>
+<p>Nakon što ste uspešno izmenili funkciju <em>kuca</em>, isprobajte razne rasporede, boje i veličine kuća, na primer ovaj ispod, ili neki koji sami izaberete:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kuca</span><span class="p">(</span><span class="mi">278</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">211</span><span class="p">,</span> <span class="mi">207</span><span class="p">,</span> <span class="mi">169</span><span class="p">))</span>
+<span class="n">kuca</span><span class="p">(</span><span class="mi">231</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">217</span><span class="p">,</span> <span class="mi">211</span><span class="p">,</span> <span class="mi">164</span><span class="p">))</span>
+<span class="n">kuca</span><span class="p">(</span><span class="mi">174</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">(</span><span class="mi">228</span><span class="p">,</span> <span class="mi">221</span><span class="p">,</span> <span class="mi">152</span><span class="p">))</span>
+<span class="n">kuca</span><span class="p">(</span><span class="mi">112</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">(</span><span class="mi">231</span><span class="p">,</span> <span class="mi">222</span><span class="p">,</span> <span class="mi">150</span><span class="p">))</span>
+<span class="n">kuca</span><span class="p">(</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="p">(</span><span class="mi">240</span><span class="p">,</span> <span class="mi">230</span><span class="p">,</span> <span class="mi">140</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Pomeranje crteža' data-toggle="tooltip"><a href="03_PyGame_14_Drawing_Movable.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Izrada crteža pomoću petlji' data-toggle="tooltip"><a href="03_PyGame_16a_Drawing_Using_Loops1.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Pomeranje crteža' data-toggle="tooltip"><a href="03_PyGame_14_Drawing_Movable.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Izrada crteža pomoću petlji' data-toggle="tooltip"><a href="03_PyGame_16a_Drawing_Using_Loops1.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

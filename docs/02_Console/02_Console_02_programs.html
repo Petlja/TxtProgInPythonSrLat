@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pajton programi &#8212; Tekstualno programiranje u Pajtonu</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tekstualne vrednosti" href="02_Console_03_text.html" />
+    <link rel="prev" title="Uvod u Pajton" href="02_Console_01_about_python.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Tekstualno programiranje u Pajtonu</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="pajton-programi">
+<h1>Pajton programi<a class="headerlink" href="#pajton-programi" title="Permalink to this headline">¶</a></h1>
+<p>Kao što smo videli u poglavlju o Karelu, programi se sastoje od naredbi. Pogledajmo neke od osnovnih naredbi u Pajtonu, koje ćemo koristiti za pisanje prvih programa.</p>
+<div class="section" id="dodeljivanje-vrednosti-promenljivoj">
+<h2>Dodeljivanje vrednosti promenljivoj<a class="headerlink" href="#dodeljivanje-vrednosti-promenljivoj" title="Permalink to this headline">¶</a></h2>
+<p>Promenljive su imenovani prostor u memoriji računara, u koji možemo da smestimo vrednost bilo koje vrste (broj, tekst, logičku vrednost ili nešto drugo). U promenljive često smeštamo međurezultate (pomoćne rezultate) pri računanju. Kada pokrenemo Pajton školjku, možemo jednom naredbom da dodelimo vrednost nekoj promenljivoj, a zatim da koristimo vrednost te promenljive u narednim komandama. Na primer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">osnova</span> <span class="o">=</span> <span class="mi">6</span><span class="o">*</span><span class="mi">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">osnova</span>
+<span class="go">48</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">osnova</span> <span class="o">*</span> <span class="mf">1.5</span>
+<span class="go">72.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">osnova</span> <span class="o">*</span> <span class="mf">1.6</span>
+<span class="go">76.80000000000001</span>
+</pre></div>
+</div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Naredba dodeljivanja vrednosti</strong></p>
+<p>Naredba dodeljivanja vrednosti se piše tako što napišemo ime promenljive, zatim znak jednakosti, a onda izraz čiju vrednost dodeljujemo promenljivoj. Cele i realne brojeve takođe smatramo za izraze (to su najjednostavniji mogući izrazi).</p>
+
+    </p></div></div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Imena promenljivih</strong></p>
+<p>Prema pravilima pisanja programa, imena promenljivih (kao i druga imena u programima koje pišemo) mogu da se sastoje od malih i velikih slova, donje crte i cifara, s tim da ne mogu da počnu cifrom.</p>
+<p>Pajton pravi razliku između malih i velikih slova. <em>N</em> i <em>n</em> su različita imena i ako bismo oba koristili, ona bi predstavljala dve različite promenljive.</p>
+<p>Ime promenljive može biti dugačko koliko nam je potrebno.</p>
+<p>Pri pisanju programa (ili pojedinačnih naredbi) se trudimo da promenljivama damo smislena imena, da bi naredbe i programi bili što jasniji.</p>
+
+    </p></div></div>
+<p>U pajtonu je uobičajen stil da se velika slova ne koriste (iako su dozvoljena), a kada se ime sastoji od više reči, te reči se razdvajaju donjom crtom, na primer <em>cena_jednog_komada</em>. Cifre se u imenima koriste kada to ima smisla (što nije često).</p>
+<p><strong>Imena promenljivih - proverite razumevanje:</strong></p>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="console__basics_quiz_variable_names">
+    <span data-component="question">Q-6: Uparite predložena imena promenljivih sa odgovorima.</span>
+	<span data-component=feedback>Pokušajte ponovo!</span>
+
+    <li data-component="draggable" id="console__basics_quiz_variable_names_drag1">2_datum </li>
+    <li data-component="dropzone" for="console__basics_quiz_variable_names_drag1"> neispravno, počinje nedozvoljenim znakom</li>
+
+    <li data-component="draggable" id="console__basics_quiz_variable_names_drag2">ljubimac_br_2 </li>
+    <li data-component="dropzone" for="console__basics_quiz_variable_names_drag2"> ispravno ime</li>
+
+    <li data-component="draggable" id="console__basics_quiz_variable_names_drag3">stanje_u_23:59 </li>
+    <li data-component="dropzone" for="console__basics_quiz_variable_names_drag3"> neispravno, sadrži nedozvoljeni znak</li>
+</ul></div>
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="console__basics_quiz_name">
+            <p>Q-7: Šta sve od navedenog može da bude ime promenljive?</p>
+
+            <li data-component="answer" data-correct id="console__basics_quiz_name_opt_a">pRoMeNlJiVa</li><li data-component="feedback" id="console__basics_quiz_name_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="console__basics_quiz_name_opt_b">a1</li><li data-component="feedback" id="console__basics_quiz_name_opt_b"></li>
+            
+            <li data-component="answer"  id="console__basics_quiz_name_opt_c">2D_grafika</li><li data-component="feedback" id="console__basics_quiz_name_opt_c"></li>
+            
+            <li data-component="answer" data-correct id="console__basics_quiz_name_opt_d">_3D_grafika</li><li data-component="feedback" id="console__basics_quiz_name_opt_d"></li>
+            
+            <li data-component="answer"  id="console__basics_quiz_name_opt_e">ljubimac-br-2</li><li data-component="feedback" id="console__basics_quiz_name_opt_e"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="ispisivanje-vrednosti-iz-programa">
+<h2>Ispisivanje vrednosti iz programa<a class="headerlink" href="#ispisivanje-vrednosti-iz-programa" title="Permalink to this headline">¶</a></h2>
+<p>Pri interaktivnom radu je dovoljno da unesemo izraz da bismo videli njegovu vrednost, ali iz programa ne možemo da koristimo takav način. Da bismo nešto ispisali iz programa, koristimo funkciju <em>print()</em>. Za sada ćemo se ograničiti na najjednostavnije načine upotrebe ove funkcije.</p>
+<p>Izraz čiju vrednost želimo da ispišemo, navodimo između zagrada, na primer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+<p>Jednim pozivom Funkcije <em>print()</em> možemo da ispišemo i više vrednosti. Izraze čije vrednosti želimo da ispišemo, navodimo između zagrada razdvojene zarezima, na primer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obim</span>  <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">b</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">povrsina</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">obim</span><span class="p">,</span> <span class="n">povrsina</span><span class="p">)</span>
+<span class="go">60 200</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Sa funkcijama smo se već sretali u poglavljima o Karelu, prepoznajemo ih po zagradama iza imena. Podsetimo se, podatke koje navodimo između zagrada nazivamo parametri ili argumenti funkcije. O funkcijama ćemo uskoro pričati opširnije.</p>
+
+    </p></div></div>
+</div>
+<div class="section" id="pokretanje-programa">
+<h2>Pokretanje programa<a class="headerlink" href="#pokretanje-programa" title="Permalink to this headline">¶</a></h2>
+<p><strong>Pokretanje programa iz brauzera</strong></p>
+<p>Da bismo vam olakšali početak učenja, koristeći <strong>ActiveCode</strong> tehnologiju  projekta <a class="reference external" href="http://runestoneinteractive.org/">Runestone Interactive</a> , omogućili smo vam da pokrećete Pajton programe u veb stranama ovog kursa. Na primer, ispod se nalaze  naredbe koje smo prethodno unosili interaktivno, ali ovaj put napisane kao program. Program možete da pokrenete klikom na dugme „Pokreni program”.</p>
+
+<div data-childcomponent="console__program_first" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__program_first data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = 10
+b = 20
+obim  = 2*a + 2*b
+povrsina = a*b
+print(obim, povrsina)
+</textarea>
+</div>
+<p><strong>Pokretanje programa iz okruženja IDLE</strong></p>
+<p>Preporučujemo vam da pored pisanja programa u ovim veb stranicama barem povremeno pokrećete programe i u <em>IDLE</em> okruženju. Navikavanje na okruženje <em>IDLE</em> je važno da biste postali samostalniji u programiranju.</p>
+<p>Kada pokrenete program <em>IDLE</em>, otvorite integrisani editor teksta (meni <em>File / New File</em>) i u njemu otkucajte prethodni (ili neki drugi) program.</p>
+<p>Kada završite program, sačuvajte ga (meni <em>File / Save</em>), a zatim ga pokrenite (meni <em>Run / Run Module</em>).</p>
+<a class="reference internal image-reference" href="../_images/console_run_from_idle.png"><img alt="../_images/console_run_from_idle.png" class="align-center" src="../_images/console_run_from_idle.png" style="width: 350px;" /></a>
+<p>Rezultat ćete videti u prozoru interaktivne školjke.</p>
+<p><strong>Pokretanje programa iz onlajn okruženja</strong></p>
+<p>Još jedan način da pokrenete svoj Pajton program je da koristite neko od onlajn okruženja za programiranje. Jedno takvo okruženje je <a class="reference external" href="https://repl.it/">https://repl.it/</a> .</p>
+<a class="reference internal image-reference" href="../_images/console_repl.it_start.png"><img alt="../_images/console_repl.it_start.png" class="align-center" src="../_images/console_repl.it_start.png" style="width: 500px;" /></a>
+<p>Kliknite na dugme <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">new</span> <span class="pre">repl</span></code>, odaberite jezik Pajton (Python) i kliknite <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">repl</span></code>. U vašem veb brauzeru će se otvoriti strana u kojoj možete da otkucate program i da ga pokrenete.</p>
+<a class="reference internal image-reference" href="../_images/console_repl.it_run.png"><img alt="../_images/console_repl.it_run.png" class="align-center" src="../_images/console_repl.it_run.png" style="width: 500px;" /></a>
+</div>
+<div class="section" id="greske-u-programima">
+<h2>Greške u programima<a class="headerlink" href="#greske-u-programima" title="Permalink to this headline">¶</a></h2>
+<p>Ponekada će se dešavati da neku naredbu u programu ne otkucate tačno po pravilima pisanja naredbi na jeziku Pajton. U takvom slučaju Pajton interpreter ne može da razume naredbu i dobijate poruku o grešci. Svako okruženje za izvršavanje programa prijavljuje grešku na nešto drugačiji način, ali svako od njih kaže u kojoj liniji programa je došlo do greške i o kojoj vrsti greške se radi.</p>
+<p>Pojava grešaka ne treba da vas brine, jer je to uobičajena stvar i dešava se i iskusnim programerima. Pažljivo pogledajte poruku, potrudite se da razumete šta je pogrešno, zatim to ispravite i pokrenite program ponovo. Razumevanje poruka o greškama je sastavni deo programiranja i može da se uvežba se kao i mnoge druge veštine.</p>
+<p>Da biste lakše razumeli poruke o greškama koje ćete dobijati (a i da biste se oslobodili eventualnog straha od greške), preporučujemo da sada probate namerno da napravite neke male greške, koje bi inače mogle da vam se potkradu pri pisanju programa.</p>
+<p>Kada napravite nekoliko namernih grešaka, naučićete kako izgledaju odgovarajuće poruke o grešci i biće vam lakše da shvatite u čemu je problem kada se te poruke kasnije pojave zbog nenamernih grešaka.</p>
+<p>Isprobajte neke greške ovde:</p>
+
+<div data-childcomponent="console__program_make_err" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__program_make_err data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+# dodajte naredbe
+</textarea>
+</div>
+<p>Mi smo vam takođe pripremili nekoliko programa sa namerno učinjenim greškama, koje zatim objašnjavamo. Programi su kratki da bi greške bile uočljivije, ali i u dužim programima ispravljanje grešaka je skoro isto. Pošto poruka o grešci sadrži broj linije programa u kojoj se greška nalazi, u dužim programima samo treba prvo naći pomenutu liniju programa i pogledati tu (i eventualno prethodnu) liniju.</p>
+<p>Pokrenite svaki od narednih programa, zatim pogledajte poruku o grešci i objašnjenje.</p>
+
+<div data-childcomponent="console__program_err1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__program_err1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+prit(2+2)
+</textarea>
+</div>
+<p>Poruka kaže da je greška tipa <em>NameError</em> (greška imena). To znači da neko od imena u pomenutoj liniji nije poznato Pajton interpreteru (nije definisano). Primećujemo da ime funkcije <em>print</em> nije tačno napisano (a funkcija <em>prit</em> ne postoji). Ubacivanjem slova <em>n</em> greška se ispravlja i program radi.</p>
+
+<div data-childcomponent="console__program_err2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__program_err2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+zbir = 2 + 2
+print(zbirr)
+</textarea>
+</div>
+<p>Greška je istog tipa, samo se ovaj put odnosi na ime <em>zbirr</em>. Uklanjanjem suvišnog slova <em>r</em> program postaje ispravan.</p>
+
+<div data-childcomponent="console__program_err3" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__program_err3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = 3
+b = 2
+print(a b)
+</textarea>
+</div>
+<p>Greška je tipa <em>SyntaxError</em> (sintaksna greška), što znači da nisu poštovana pravila pisanja na Pajtonu. U ovom slučaju nedostaje zarez između <em>a</em> i <em>b</em>.</p>
+
+<div data-childcomponent="console__program_err4" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__program_err4 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = 3
+b = 2
+print a, b
+</textarea>
+</div>
+<p>Još jedna sintaksna greška. Ponovo nisu ispoštovana pravila pisanja, a ovaj put nedostaju zagrade.</p>
+
+<div data-childcomponent="console__program_err5" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=console__program_err5 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+               data-hidehistory=true
+       >
+a = 3
+b = 0
+print(a / b)
+</textarea>
+</div>
+<p>Greška je tipa <em>ZeroDivisionError</em> (greška deljenja nulom). Ova greška je drugačija od prethodnih, jer je naredba  pravilno napisana i interpreter ju je rastumačio. Međutim, prilikom izvršvanja ove naredbe došlo je do deljenja nulom, što nije dozvoljena operacija. Program treba pisati tako da ne dolazi do situacije u kojoj se pokušava deljenje nulom. Ispravka u ovom slučaju zavisi od toga šta želimo da naš program radi u ovakvoj siuaciji. Jedna mogućnost je da pre deljenja proverimo da li je delilac jednak nuli.</p>
+<hr class="docutils" />
+<p>Proverite da li ste razumeli ova tri tipa greške, tako što ćete odgovoriti na pitanje.</p>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="console__program_quiz_errors">
+    <span data-component="question">Q-8: Upari tip greške sa programom.</span>
+	<span data-component=feedback>Pokušajte ponovo!</span>
+
+    <li data-component="draggable" id="console__program_quiz_errors_drag1">SyntaxError</li>
+    <li data-component="dropzone" for="console__program_quiz_errors_drag1">print(3*(2+2)</li>
+
+    <li data-component="draggable" id="console__program_quiz_errors_drag2">NameError</li>
+    <li data-component="dropzone" for="console__program_quiz_errors_drag2">a=3</br>print(a / b)</li>
+
+    <li data-component="draggable" id="console__program_quiz_errors_drag3">ZeroDivisionError</li>
+    <li data-component="dropzone" for="console__program_quiz_errors_drag3">b=3//6</br>print(3 // b)</li>
+</ul></div></div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Uvod u Pajton' data-toggle="tooltip"><a href="02_Console_01_about_python.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Tekstualne vrednosti' data-toggle="tooltip"><a href="02_Console_03_text.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Uvod u Pajton' data-toggle="tooltip"><a href="02_Console_01_about_python.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Tekstualne vrednosti' data-toggle="tooltip"><a href="02_Console_03_text.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

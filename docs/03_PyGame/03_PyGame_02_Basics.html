@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pisanje PyGame programa &#8212; Tekstualno programiranje u Pajtonu</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="../_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Crtanje" href="03_PyGame_10_Drawing.html" />
+    <link rel="prev" title="Biblioteka PyGame" href="03_PyGame_01_Intro.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'TxtProgInPython';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'TxtProgInPython';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '../_images/';
+  eBookConfig.staticDir = '../_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="../_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="../">Tekstualno programiranje u Pajtonu</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="pisanje-pygame-programa">
+<h1>Pisanje PyGame programa<a class="headerlink" href="#pisanje-pygame-programa" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="osnovna-struktura-pygame-programa">
+<h2>Osnovna struktura PyGame programa<a class="headerlink" href="#osnovna-struktura-pygame-programa" title="Permalink to this headline">¶</a></h2>
+<p>Da bi programi koje pišemo mogli da koriste biblioteku (modul) PyGame, prva stvar koju treba da uradimo je da na početku programa priključimo našem programu modul PyGame. Time omogućavamo upotrebu svih funkcija i konstanti koje su definisane u modulu PyGame.</p>
+<p>Svaki program koji koristi biblioteku PajGejm (PyGame), po priključivanju modula a pre pozivanja drugih gunkcija treba da izvrši nekoliko koraka da bi inicijalizovao biblioteku, zadao dimenzije prozora u kome će program da crta i postavio naslov tog prozora. Isto tako, na kraju programa ima nekoliko koraka koji govore programu da treba da čeka dok korisnik ne klikne na dugme za zatvaranje prozora, a zatim da zatvori prozor i isključi biblioteku PyGame.</p>
+<p>Ti koraci na početku i na kraju rada su u svakom programu isti ili vrlo slični. Da bi korišćenje PyGame biblioteke bilo što jednostavnije za početnike, koristićemo i malu dodatnu biblioteku po imenu <em>PyGameBg</em>. Zahvaljujući ovoj biblioteci, umesto navođenja svih neophodnih koraka dovoljno je da i modul <em>pygamebg</em> priključimo našem programu, a zatim pozovemo samo po jednu funkciju iz modula <em>pygamebg</em> na početku i na kraju programa. Time programi postaju kraći i jednostavniji, što nam omogućava da se usredsredimo na deo programa koji je specifičan za dati zadatak.</p>
+<p>Programe koji koriste biblioteku <em>PyGameBg</em> možete da pokrenete i u svom lokalnom razvojnom okruženju (npr. <em>IDLE</em>). Potrebno je samo da pre toga instalirate i biblioteku <em>PyGameBg</em> na isti način kao što ste instalirali biblioteku <em>pygamebg</em>, kucanjem <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">pygamebg</span></code> u komandnoj liniji. Kada instalirate i ovu biblioteku, možete da kopirate izabrani program u vaš editor i sačuvate ga na vašem računaru. Posle toga program možete da dorađujete i menjate po volji, da čuvate različite verzije programa i da ih isprobavate pokretanjem programa.</p>
+<p>Evo kako izgleda jedan PajGejm program, koji crta jednu kosu duž i čeka da korisnik zatvori prozor.</p>
+
+<div data-childcomponent="pygame__basics_first_example" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pygame__basics_first_example data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+       >
+import pygame as pg
+import pygamebg
+prozor = pygamebg.open_window(400, 400, "Pygame")
+
+prozor.fill(pg.Color("white"))
+pg.draw.line(prozor, pg.Color("black"), (100, 100), (300, 300), 5)
+
+pygamebg.wait_loop()
+</textarea>
+</div>
+<p>Prođimo redom kroz naredbe ovog programa da bismo detaljnije objasnili čemu one služe.</p>
+<p>Najpre imamo grupu naredbi kakve će morati da se pojave na početku svakog programa:</p>
+<ul class="simple">
+<li><p>naredbom <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pygame</span> <span class="pre">as</span> <span class="pre">pg</span></code> priključujemo modul <em>pygame</em> našem programu. Ovde koristimo malo drugačiji oblik naredbe <em>import</em> od onog koji smo koristili ranije. Ovde ujedno modulu <em>pygame</em> dajemo skraćeno ime <em>pg</em> i to skraćeno ime onda koristimo nadalje u programu kao ime modula. Mogli smo ravnopravno da pišemo i samo <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pygame</span></code> i tada bi u nastavku programa umesto <em>pg.Color</em>, <em>pg.draw.line</em> i slično, trebalo da stoji <em>pygame.Color</em>, <em>pygame.draw.line</em> itd.</p></li>
+<li><p>naredbom <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pygamebg</span></code> priključujemo modul <em>pygamebg</em> našem programu. Ova naredba se zajedno sa prethodnom može spojiti u jednu: <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pygame</span> <span class="pre">as</span> <span class="pre">pg,</span> <span class="pre">pygamebg</span></code>, a to ćemo često i činiti.</p></li>
+<li><p>Naredba <code class="docutils literal notranslate"><span class="pre">prozor</span> <span class="pre">=</span> <span class="pre">pygamebg.open_window(400,</span> <span class="pre">400,</span> <span class="pre">&quot;Pygame&quot;)</span></code> poziva fukciju <code class="docutils literal notranslate"><span class="pre">open_window</span></code> iz modula <code class="docutils literal notranslate"><span class="pre">pygamebg</span></code>, koji smo dodali programu. U ovoj funkciji se obavljaju sve portebne pripremne radnje koje smo ranije pominjali. Parametri funkcije su širina, visina i naslov prozora koji se pozivom ove funkcije otvara. Promenljivu <em>prozor</em> koju ova funkcija vraća, kasnije koristimo u programu da bismo u tom prozoru crtali.</p></li>
+</ul>
+<p>Sledi grupa naredbi koja je u svakom programu drugačija i određuje šta konkretan program zapravo radi. Naš prvi program crta crnu liniju na beloj pozadini, a to je postignuto pomoću ovog dela programa:</p>
+<ul class="simple">
+<li><p>naredba <code class="docutils literal notranslate"><span class="pre">prozor.fill(pg.Color(&quot;white&quot;))</span></code> boji prozor u belo. Ovakvom naredbom se često započinje crtanje (boja može da bude i drugačija)</p></li>
+<li><p>naredba <code class="docutils literal notranslate"><span class="pre">pg.draw.line(prozor,</span> <span class="pre">pg.Color(&quot;black&quot;),</span> <span class="pre">(100,</span> <span class="pre">100),</span> <span class="pre">(300,</span> <span class="pre">300),</span> <span class="pre">5)</span></code> crta liniju.</p></li>
+</ul>
+<p>Ovakve naredbe će uskoro biti detaljno objašnjene, ali ako ste nestrpljivi, možete da probate da u programu izmenite vrednosti parametara ili dodate nove, slične naredbe i sami otkrijete kako ove funkcije za crtanje rade.</p>
+<p>Na kraju programa imamo poziv još jedne funkcije iz modula <em>pygamebg</em>: <code class="docutils literal notranslate"><span class="pre">pygamebg.wait_loop()</span></code>. U ovoj funkciji se nalaze naredbe koje omogućavaju da se crtež pojavi na prozoru i da prozor ostane otvoren dok korisnik ne klikne na dugme za zatvaranje. Funkcija nakon zatvaranja prozora deaktivira sve pokrenute delove biblioteke PajGejm (isključuje ih).</p>
+<p>Svi naši PajGejm programi će se završavati pozivom funkcije <code class="docutils literal notranslate"><span class="pre">pygamebg.wait_loop()</span></code> ili neke slične funkcije. Posle izvršenja ove funkcije program može da nastavi da radi bez biblioteke <em>PyGame</em> u tekstualnom prozoru ako za time ima potrebe.</p>
+</div>
+<div class="section" id="koordinatni-sistem">
+<h2>Koordinatni sistem<a class="headerlink" href="#koordinatni-sistem" title="Permalink to this headline">¶</a></h2>
+<p>Koordinate su nam veoma važan pojam i sa njima ćemo se susretati u baš svakom PajGejm programu. Položaj svih objekata (tačaka, duži, krugova, teksta, gotovih slika itd.) na prozoru određuje se njihovim koordinatama u koordinatom sistemu prozora.</p>
+<p>Koordinatni sistem prozora je sličan, ali ipak malo drugačiji od onog koji se koristi u matematici. Položaj tačke je i u ovom slučaju određen uređenim parom njenih koordinata (koordinatom x tj. apscisom i koordinatom y tj. ordinatom). Jedinica mere je jedan piksel.</p>
+<p>U računarskoj grafici, koordinatni početak je u gornjem levom uglu prozora. Koordinata <span class="math notranslate nohighlight">\(x\)</span> raste kada se krećemo na desno (kao i u matematici), ali koordinata <span class="math notranslate nohighlight">\(y\)</span> opada kada se krećemo na gore, odnosno povećava se kada se krećemo na dole, što je drugačije od uobičajenog koordinatnog sistema iz matematike. Neka je data tačka <span class="math notranslate nohighlight">\(A(5, 3)\)</span>. Ako bismo pomerili ovu tačku za 1 na gore i zadržali njenu <span class="math notranslate nohighlight">\(x\)</span> koordinatu, tada bi nove koordinate tačke <span class="math notranslate nohighlight">\(A\)</span> bile <span class="math notranslate nohighlight">\(A(5, 2)\)</span>. Ako bismo tačku <span class="math notranslate nohighlight">\(A\)</span> sa trenutne pozicije pomerili na dole za 2, nove koordinate bi joj bile <span class="math notranslate nohighlight">\(A(5, 4)\)</span>. Dakle, <strong>prva koordinata tačke određuje koliko je tačka udaljena od leve ivice prozora</strong>, a <strong>druga koordinata koliko je tačka udaljena od gornje ivice prozora</strong>.</p>
+<a class="reference internal image-reference" href="../_images/coordinate_system.png"><img alt="../_images/coordinate_system.png" class="align-center" src="../_images/coordinate_system.png" style="width: 400px;" /></a>
+<p>U programskom jeziku Pajton par koordinata tačke možemo predstaviti bilo dvočlanom torkom <code class="docutils literal notranslate"><span class="pre">(3,</span> <span class="pre">5)</span></code> bilo dvočlanom listom <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">5]</span></code>.  U prethodnom primeru dve krajnje tačke duži bile su zadate pomoću dve dvočlane torke (<code class="docutils literal notranslate"><span class="pre">(100,</span> <span class="pre">100)</span></code> i <code class="docutils literal notranslate"><span class="pre">(300,</span> <span class="pre">300)</span></code>).</p>
+
+<div data-childcomponent="pygame__basics_coordinates" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pygame__basics_coordinates data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+pg.draw.line(prozor, pg.Color("black"), (100, 100), (300, 300), 5)
+</textarea>
+</div>
+<p>Često je potrebno zadati i pravougaonik, čije su stranice paralelne koordinatnim osama. Takav pravougaonik se zadaje pomoću torke ili liste od četiri broja: <code class="code docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y,</span> <span class="pre">w,</span> <span class="pre">h)</span></code> ili <code class="code docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">w,</span> <span class="pre">h]</span></code>. Pri tome <span class="math notranslate nohighlight">\(x\)</span> i <span class="math notranslate nohighlight">\(y\)</span> predstavljaju koordinate gornjeg levog temena pravougaonika, a <span class="math notranslate nohighlight">\(w\)</span> i <span class="math notranslate nohighlight">\(h\)</span> predstavljaju redom širinu i visinu tog pravougaonika u pikselima. Tako na primer, pravougaonik na sledećoj slici bi mogao da se zada kao <code class="code docutils literal notranslate"><span class="pre">pygame.Rect(2,</span> <span class="pre">1,</span> <span class="pre">4,</span> <span class="pre">3)</span></code>, ili prosto kao <code class="code docutils literal notranslate"><span class="pre">(2,</span> <span class="pre">1,</span> <span class="pre">4,</span> <span class="pre">3)</span></code> ili <code class="code docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">1,</span> <span class="pre">4,</span> <span class="pre">3]</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/rect_coordinates.png"><img alt="../_images/rect_coordinates.png" class="align-center" src="../_images/rect_coordinates.png" style="width: 400px;" /></a>
+<p>Naredni program može da vam pomogne da shvatite koordinate. Pokrenite program klikom na dugme „Prikaži primer”, a zatim pomerajte miša i pratite kako se koordinate menjaju. Prozor po kom se miš kreće je veliičine 300 puta 300 piskela. Vrednosti koordinata <em>x</em> i <em>y</em> se pojavljuju i u naslovu prozora i pored pokazivača miša. Zapis pored miša u obliku uređenog para, kao što će biti i u programima kada zadajemo jednu tačku.</p>
+
+<div data-childcomponent="pygame__basics_learn_coordinates" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pygame__basics_learn_coordinates data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+           data-playtask="true"   data-modaloutput="true" data-hidehistory=true
+     data-includehsrc="# -*- acsection: general-init -*-
+import pygame as pg
+
+print(pg.__path__)
+
+# uključivanje rada biblioteke PyGame
+pg.init()
+
+# postavljamo naslov prozora
+pg.display.set_caption(&quot;Pygame&quot;)
+# određujemo dimenzije prozora
+(sirina, visina) = (300, 300)
+# prikazujemo prozor tih dimenzija
+prozor = pg.display.set_mode((sirina, visina))
+
+def tekst(s, x, y):
+    # font kojim će biti prikazan tekst
+    font = pg.font.SysFont(&quot;Arial&quot;, 25)
+    tekst = font.render(s, True, pg.Color(&quot;red&quot;))
+    # određujemo veličinu tog teksta (da bismo mogli da ga centriramo)
+    (sirina_teksta, visina_teksta) = (tekst.get_width(), tekst.get_height())
+    # položaj određujemo tako da tekst bude centriran
+    (x, y) = (x - sirina_teksta * (x / sirina), y - visina_teksta * (y / visina))
+    # prikazujemo sličicu na odgovarajućem mestu na ekranu
+    prozor.blit(tekst, (x, y))
+# -*- acsection: main -*-
+
+# -*- acsection: after-main -*-
+# petlja obrade događaja - čekamo dok korisnik ne isključi prozor
+while True:
+    dogadjaj = pg.event.wait()
+
+    if dogadjaj.type == pg.QUIT:
+        break
+    elif dogadjaj.type == pg.MOUSEMOTION:
+        # bojimo pozadinu prozora u belo
+        prozor.fill(pg.Color(&quot;white&quot;))
+        (x, y) = dogadjaj.pos
+        pg.draw.line(prozor, pg.Color(&quot;black&quot;), (x, 0), (x, visina))
+        pg.draw.line(prozor, pg.Color(&quot;black&quot;), (0, y), (sirina, y))
+        s = &quot;(&quot; + str(x) + &quot;, &quot; + str(y) + &quot;)&quot;
+        tekst(s, x, y)
+        s = &quot;x: &quot; + str(x) + &quot; &quot; + &quot;y: &quot; + str(y)
+        pg.display.set_caption(s)
+        # osvežavamo sadržaj prozora i tako prikazujemo ono što smo nacrtali
+        pg.display.update()
+
+# isključivanje rada biblioteke PyGame
+pg.quit()
+"  >
+
+
+</textarea>
+</div>
+<p>Proverite svoje znanje o koordinatama kroz narednih nekoliko pitanja.</p>
+<a class="reference internal image-reference" href="../_images/pygame_quiz_coordinates.png"><img alt="../_images/pygame_quiz_coordinates.png" class="align-center" src="../_images/pygame_quiz_coordinates.png" style="width: 300px;" /></a>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="pygame__basics_quiz_coordinates_circles">
+    <span data-component="question">Q-34: Povežite boju kružića sa koordinatama njegovog centra (dimenzije prozora su 300 puta 300 piksela).</span>
+	<span data-component=feedback>Pokušajte ponovo!</span>
+
+    <li data-component="draggable" id="pygame__basics_quiz_coordinates_circles_drag1">crvena</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_coordinates_circles_drag1">(30, 40)</li>
+
+    <li data-component="draggable" id="pygame__basics_quiz_coordinates_circles_drag2">zelena</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_coordinates_circles_drag2">(50, 280)</li>
+
+    <li data-component="draggable" id="pygame__basics_quiz_coordinates_circles_drag3">plava</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_coordinates_circles_drag3">(230, 20)</li>
+
+    <li data-component="draggable" id="pygame__basics_quiz_coordinates_circles_drag4">crna</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_coordinates_circles_drag4">(150, 170)</li>
+</ul></div>
+        <div class="course-box course-box-question course-content">
+        <div data-component="fillintheblank" id="pygame__basics_quiz_coordinates_vindow_center">
+            <p>Ako je prozor širine 200 i visine 300 piksela, koje su koordinate njegove centralne tačke (rezultat napišite u obliku uređenog para)?</p>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^ *\\(100,[ +]*150\\) *$", "regexFlags": "", "feedback": "<p>Ta\u010dno!</p>\n"}, {"regex": "^ *\\(100,[ +]*[0-9]+\\) *$", "regexFlags": "", "feedback": "<p>Pa\u017eljivije izra\u010dunaj koordinatu y.</p>\n"}, {"regex": "^ *\\([0-9]+,[ +]*150\\) *$", "regexFlags": "", "feedback": "<p>Pa\u017eljivije izra\u010dunaj koordinatu x.</p>\n"}, {"regex": "^ *\\([0-9]+,[ +]*[0-9]+\\) *$", "regexFlags": "", "feedback": "<p>Pa\u017eljivije izra\u010dunaj obe koordinate.</p>\n"}, {"regex": "^ *.* *$", "regexFlags": "", "feedback": "<p>Rezultat zapi\u0161i u obliku ure\u0111enog para.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="pygame__basics_quiz_coordinates_dir">
+            <p>Q-35: Označite tačna tvrđenja.</p>
+
+            <li data-component="answer" data-correct id="pygame__basics_quiz_coordinates_dir_opt_a">Koordinata x raste sleva nadesno.</li><li data-component="feedback" id="pygame__basics_quiz_coordinates_dir_opt_a">Tačno.</li>
+            
+            <li data-component="answer"  id="pygame__basics_quiz_coordinates_dir_opt_b">Koordinata y opada od vrha ka dnu ekrana.</li><li data-component="feedback" id="pygame__basics_quiz_coordinates_dir_opt_b">Koordinata y raste od vrha ka dnu ekrana.</li>
+            
+            <li data-component="answer" data-correct id="pygame__basics_quiz_coordinates_dir_opt_c">Tačke na gornjoj ivici ekrana imaju koordinatu y jednaku 0.</li><li data-component="feedback" id="pygame__basics_quiz_coordinates_dir_opt_c">Tačno.</li>
+            
+            <li data-component="answer"  id="pygame__basics_quiz_coordinates_dir_opt_d">Tačke na desnoj ivici ekrana imaju koordinatu x jednaku 0.</li><li data-component="feedback" id="pygame__basics_quiz_coordinates_dir_opt_d">Tačke na desnoj ivici ekrana imaju najveću x koordinatu.</li>
+            
+            <li data-component="answer" data-correct id="pygame__basics_quiz_coordinates_dir_opt_e">Tačka u donjem desnom uglu ekrana ima najveće obe koordinate.</li><li data-component="feedback" id="pygame__basics_quiz_coordinates_dir_opt_e">Tačno.</li>
+            
+
+            </ul>
+            </div>
+            
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="pygame__basics_quiz_coordinates_corners">
+    <span data-component="question">Q-36: Ako je širina prozora `s`, a visina `v`, upari temena ekrana sa njihovim koordinatama.</span>
+	<span data-component=feedback>Pokušajte ponovo!</span>
+
+    <li data-component="draggable" id="pygame__basics_quiz_coordinates_corners_drag1">gornje-levo</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_coordinates_corners_drag1">(0, 0)</li>
+
+    <li data-component="draggable" id="pygame__basics_quiz_coordinates_corners_drag2">gornje-desno</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_coordinates_corners_drag2">(s, 0)</li>
+
+    <li data-component="draggable" id="pygame__basics_quiz_coordinates_corners_drag3">donje-levo</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_coordinates_corners_drag3">(0, v)</li>
+
+    <li data-component="draggable" id="pygame__basics_quiz_coordinates_corners_drag4">donje-desno</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_coordinates_corners_drag4">(s, v)</li>
+</ul></div></div>
+<div class="section" id="zadavanje-boja">
+<h2>Zadavanje boja<a class="headerlink" href="#zadavanje-boja" title="Permalink to this headline">¶</a></h2>
+<p>Pri crtanju se, naravno, mogu koristiti različite boje. Boju možemo zadati njenim imenom (na engleskom), koje se navodi kao parametar funkcije <code class="docutils literal notranslate"><span class="pre">pg.Color</span></code>. Možete da koristite boje navođenjem odgovarajuće niske (stringa): <code class="docutils literal notranslate"><span class="pre">'black'</span></code> za crnu, <code class="docutils literal notranslate"><span class="pre">'white'</span></code> za belu, <code class="docutils literal notranslate"><span class="pre">'gray'</span></code> za sivu, <code class="docutils literal notranslate"><span class="pre">'blue'</span></code> za plavu, <code class="docutils literal notranslate"><span class="pre">'green'</span></code> za zelenu, <code class="docutils literal notranslate"><span class="pre">'orange'</span></code> za narandžastu, <code class="docutils literal notranslate"><span class="pre">'yellow'</span></code> za žutu i slično. Podsetimo se, niske se navode bilo između jednostrukih, bilo između dvostrukih navodnika (ravnopravno se, na primer, mogu koristiti``’blue’`` i <code class="docutils literal notranslate"><span class="pre">&quot;blue&quot;</span></code>). Na primer, ako pozovete funkciju <code class="docutils literal notranslate"><span class="pre">py.draw.line(prozor,</span> <span class="pre">pg.Color('blue'),</span> <span class="pre">(0,</span> <span class="pre">0),</span> <span class="pre">(200,</span> <span class="pre">200),</span> <span class="pre">3)</span></code> na prozoru će se prikazati duž debljine 3 piksela, plave boje, čija su temena tačke sa koordinatama <span class="math notranslate nohighlight">\((0, 0)\)</span> i <span class="math notranslate nohighlight">\((200, 200)\)</span>.</p>
+<p>Neka od imena boja, koja se često koriste u programima su:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 67%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pg.Color(&quot;black&quot;)</span></code></p></td>
+<td><p>Crna</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pg.Color(&quot;white&quot;)</span></code></p></td>
+<td><p>Bela</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pg.Color(&quot;red&quot;)</span></code></p></td>
+<td><p>Crvena</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pg.Color(&quot;green&quot;)</span></code></p></td>
+<td><p>Zelena</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pg.Color(&quot;blue&quot;)</span></code></p></td>
+<td><p>Plava</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pg.Color(&quot;cyan&quot;)</span></code></p></td>
+<td><p>Rezeda</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pg.Color(&quot;magenta&quot;)</span></code></p></td>
+<td><p>Ljubičasta</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pg.Color(&quot;yellow&quot;)</span></code></p></td>
+<td><p>Žuta</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pg.Color(&quot;orange&quot;)</span></code></p></td>
+<td><p>Narandžasta</p></td>
+</tr>
+</tbody>
+</table>
+<p>Poigrajte se malo sa bojama u narednom programu i pokušajte da obojite prozor u neke ili sve od ovih boja.</p>
+
+<div data-childcomponent="pygame__basics_colors" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pygame__basics_colors data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+       data-enablecopy="true">
+# -*- acsection: general-init -*-
+import pygame as pg, pygamebg
+
+# uključivanje rada biblioteke PyGame
+prozor = pygamebg.open_window(400, 400, "Boje - nazivi")
+# -*- acsection: main -*-
+
+# bojimo pozadinu prozora
+prozor.fill(pg.Color("???"))
+
+ # -*- acsection: after-main -*-
+ # zavrsavamo rad biblioteke PyGame
+ pygamebg.wait_loop()
+</textarea>
+</div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Jedna od grešaka koja se često dešava pri pisanju prvih PajGejm programa je da prilikom zadavanja boje napišete <code class="docutils literal notranslate"><span class="pre">pg.color</span></code> malim slovom, umesto velikim - <code class="docutils literal notranslate"><span class="pre">pg.Color</span></code>. To pruzrokuje grešku sa porukom <code class="docutils literal notranslate"><span class="pre">AttributeError:</span> <span class="pre">''</span> <span class="pre">object</span> <span class="pre">has</span> <span class="pre">no</span> <span class="pre">attribute</span> <span class="pre">'color'</span></code>.</p>
+<p>Još jedna česta greška je da naziv boje ne navedete pod navodnicima (na primer, da navedete <code class="docutils literal notranslate"><span class="pre">pg.Color(white)</span></code>). Tada uz grešku pojavljuje poruka <code class="docutils literal notranslate"><span class="pre">NameError:</span> <span class="pre">name</span> <span class="pre">'white'</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">defined</span> <span class="pre">on</span> <span class="pre">line</span> <span class="pre">8</span></code>.</p>
+
+    </p></div></div>
+<p>Pored ovih boja, postoje i mnoge druge koje možete da koristie. Ukupan broj svih nijansi koje postoje u računarima je ogroman i iznosi oko 16 miliona. Od toga, pomoću imena možemo da zadamo nešto više od 600 različitih boja (kompletan spisak se nalazi u fajlu <em>colordict.py</em>, koji lako možete da nađete na internetu, a ako ste instalirali PajGejm, imate ga i na svom računaru).</p>
+<p>Sve ove imenovane boje, a i sve ostale koje nemaju imena, možemo da zadamo pomoću brojeva. Za to se najviše koristi takozvani <em>RGB</em> model boja.  Naime, u računarskoj grafici svaka boja se dobija mešanjem određene količine crvene, zelene i plave, po čijim imenima na engleskom (<em>Red</em>, <em>Green</em>, <em>Blue</em>) je <em>RGB</em> model i dobio ime. Na primer, kombinovanjem crvenog i zelenog svetla dobija se žuto svetlo, kombinovanjem crvenog i plavog ljubičasto, a kombinovanjem plavog i zelenog rezeda. Kombinovanjem svetla sve tri osnovne boje dobija se belo svetlo dok se crno svetlo dobija kada se sva tri svetla isključe. Sivo svetlo se dobija kada se izmeša podjednaka količina, crvenog, zelenog i plavog svetla.</p>
+<a class="reference internal image-reference" href="../_images/RGB.png"><img alt="../_images/RGB.png" class="align-center" src="../_images/RGB.png" style="width: 200px;" /></a>
+<p>Boju tako možemo opisati navodeći tri broja (u ovom slučaju to su brojevi od 0 do 255), koji redom predstavljaju količinu crvene, zelene i plave komponente u boji koju definišemo. U programskom jeziku Pajton boju možemo da predstavimo i u obliku tročlane uređene torke (na pr. <code class="docutils literal notranslate"><span class="pre">(123,</span> <span class="pre">80,</span> <span class="pre">56)</span></code>) ili tročlane liste (na pr. <code class="docutils literal notranslate"><span class="pre">[123,</span> <span class="pre">80,</span> <span class="pre">56]</span></code>). Torku ili listu možete navesti direktno kao argument funkcije koji odgovara boji, a možete je upamtiti u promenljivoj i kasnije koristiti ime promenljive. Na primer, dodelom <code class="docutils literal notranslate"><span class="pre">REZEDA</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">255,</span> <span class="pre">255)</span></code> definišemo rezeda boju navodeći odgovarajuće količine crvene, zelene i plave svetlosti koju ova boja sadrži (pošto je to mešavina plave i zelene boje u njoj nema nimalo crvene, a plava i zelena komponenta su na maksimumu). Nakon toga, tu boju možemo upotrebiti i u pozivu funkcije (na pr. <code class="docutils literal notranslate"><span class="pre">prozor.fill(REZEDA)</span></code>). Imena tih promenljivih ne moraju biti napisana velikim slovima, ali to je postalo uobičajeno u pisanju Pajton programa. U programima koje budete čitali u nastavku, susretaćete se sa definicijama ovog oblika.</p>
+<p>Boju je moguće zadati i sa četiri broja, na primer <code class="docutils literal notranslate"><span class="pre">REZEDA</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">255,</span> <span class="pre">255,</span> <span class="pre">10)</span></code>. Poslednji, četvrti parametar (takođe od 0 do 255) određuje prozirnost boje, tj. ovako zadata rezeda boja je blago providna.</p>
+<p>Rezimirajmo sada RGB vrednosti nekih karakterističnih boja.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 63%" />
+<col style="width: 37%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">(255,</span> <span class="pre">0,</span> <span class="pre">0)</span></code></p></td>
+<td><p>crvena</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">255,</span> <span class="pre">0)</span></code></p></td>
+<td><p>zelena</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">255)</span></code></p></td>
+<td><p>plava</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">(255,</span> <span class="pre">255,</span> <span class="pre">0)</span></code></p></td>
+<td><p>žuta</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">255,</span> <span class="pre">255)</span></code></p></td>
+<td><p>rezeda</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">(255,</span> <span class="pre">0,</span> <span class="pre">255)</span></code></p></td>
+<td><p>ljubičasta</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">(255,</span> <span class="pre">255,</span> <span class="pre">255)</span></code></p></td>
+<td><p>bela</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></code></p></td>
+<td><p>crna</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">(128,</span> <span class="pre">128,</span> <span class="pre">128)</span></code></p></td>
+<td><p>siva</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">(255,</span> <span class="pre">128,</span> <span class="pre">0)</span></code></p></td>
+<td><p>narandžasta</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">(255,</span> <span class="pre">128,</span> <span class="pre">128)</span></code></p></td>
+<td><p>roze</p></td>
+</tr>
+</tbody>
+</table>
+<p>Primetimo da su nijanse sive boje prepoznatljive po tome što su u njima količina crvene, zelene i plave jednake. Što je ta količina manja, nijansa sive je tamnija i obrnuto, veće jednake količine crvene, zelene i plave predstavljju svetlije nijanse sive (na osnovu <em>RGB</em> vrednosti, crnu i belu možemo da posmatramo kao najtamniju i najsvetliju nijansu sive).</p>
+<p>U narednom programu možete da isprobate i zapise boja u RGB obliku. Pored bojenja prozora u neke ili sve od nabrojanih boja, možete da unesete i druge (bilo koje) trojke vrednosti između 0 i 255.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Kada budete birali boje koje želite da koristite u svojim programima, može da vam pomogne alatka za biranje boja. Takvih alatki ima i na mnogim sajtovima (tražite <em>color picker</em>), a možete da koristite i onu iz programa <em>Paint</em>. Možete da isprobate već sada - izaberite boju i prepišite vrednosti <em>R</em>, <em>G</em>, <em>B</em> u program.</p>
+
+    </p></div></div>
+
+<div data-childcomponent="pygame__basics_colors_rgb" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pygame__basics_colors_rgb data-lang="python" 
+      data-timelimit=25000    
+    data-audio=''   
+              data-modaloutput="true" data-hidehistory=true
+       data-enablecopy="true">
+# -*- acsection: general-init -*-
+import pygame as pg
+
+# uključivanje rada biblioteke PyGame
+pg.init()
+
+# postavljamo naslov prozora
+pg.display.set_caption("Boje - RGB")
+# određujemo dimenzije prozora
+(sirina, visina) = (400, 400)
+# prikazujemo prozor tih dimenzija
+prozor = pg.display.set_mode((sirina, visina))
+# -*- acsection: main -*-
+
+# bojimo pozadinu prozora
+prozor.fill([???, ???, ???])
+
+# -*- acsection: after-main -*-
+# osvežavamo sadržaj prozora i tako prikazujemo ono što smo nacrtali
+pg.display.update()
+
+# petlja obrade događaja - čekamo dok korisnik ne isključi prozor
+while pg.event.wait().type != pg.QUIT:
+    pass
+
+# isključivanje rada biblioteke PyGame
+pg.quit()
+</textarea>
+</div>
+<p>Utvrdite svoje znanje o bojama tako što ćete odgovoriti na narednih nekoliko pitanja.</p>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="pygame__basics_quiz_color_names">
+    <span data-component="question">Q-37: uparite boje.</span>
+	<span data-component=feedback>Pokušajte ponovo!</span>
+
+    <li data-component="draggable" id="pygame__basics_quiz_color_names_drag1">Crna</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_color_names_drag1">pg.Color("black")</li>
+
+    <li data-component="draggable" id="pygame__basics_quiz_color_names_drag2">Plava</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_color_names_drag2">pg.Color("blue")</li>
+
+    <li data-component="draggable" id="pygame__basics_quiz_color_names_drag3">Crvena</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_color_names_drag3">pg.Color("red")</li>
+
+    <li data-component="draggable" id="pygame__basics_quiz_color_names_drag4">Zelena</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_color_names_drag4">pg.Color("green")</li>
+</ul></div>
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="pygame__basics_quiz_color_values">
+    <span data-component="question">Q-38: uparite boje.</span>
+	<span data-component=feedback>Pokušajte ponovo!</span>
+
+    <li data-component="draggable" id="pygame__basics_quiz_color_values_drag1">Crna</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_color_values_drag1">(0, 0, 0)</li>
+
+    <li data-component="draggable" id="pygame__basics_quiz_color_values_drag2">Plava</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_color_values_drag2">(0, 0, 255)</li>
+
+    <li data-component="draggable" id="pygame__basics_quiz_color_values_drag3">Crvena</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_color_values_drag3">(255, 0, 0)</li>
+
+    <li data-component="draggable" id="pygame__basics_quiz_color_values_drag4">Zelena</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_color_values_drag4">(0, 255, 0)</li>
+</ul></div>
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pygame__basics_quiz_color_gray">
+            <p>Q-39: Koja od narednih boja je neka nijansa sive?</p>
+
+            <li data-component="answer"  id="pygame__basics_quiz_color_gray_opt_a">(1, 12, 123)</li><li data-component="feedback" id="pygame__basics_quiz_color_gray_opt_a">Pokušajte ponovo</li>
+            
+            <li data-component="answer"  id="pygame__basics_quiz_color_gray_opt_b">(128, 0, 128)</li><li data-component="feedback" id="pygame__basics_quiz_color_gray_opt_b">Pokušajte ponovo</li>
+            
+            <li data-component="answer"  id="pygame__basics_quiz_color_gray_opt_c">(0, 0, 128)</li><li data-component="feedback" id="pygame__basics_quiz_color_gray_opt_c">Pokušajte ponovo</li>
+            
+            <li data-component="answer" data-correct id="pygame__basics_quiz_color_gray_opt_d">(145, 145, 145)</li><li data-component="feedback" id="pygame__basics_quiz_color_gray_opt_d">Tačno</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pygame__basics_quiz_color_purple">
+            <p>Q-40: Koje boje se mešaju da bi se dobila ljubičasta boja?</p>
+
+            <li data-component="answer"  id="pygame__basics_quiz_color_purple_opt_a">crvena i zelena</li><li data-component="feedback" id="pygame__basics_quiz_color_purple_opt_a">Pokušajte ponovo</li>
+            
+            <li data-component="answer" data-correct id="pygame__basics_quiz_color_purple_opt_b">plava i crvena</li><li data-component="feedback" id="pygame__basics_quiz_color_purple_opt_b">Tačno</li>
+            
+            <li data-component="answer"  id="pygame__basics_quiz_color_purple_opt_c">zelena i plava</li><li data-component="feedback" id="pygame__basics_quiz_color_purple_opt_c">Pokušajte ponovo</li>
+            
+            <li data-component="answer"  id="pygame__basics_quiz_color_purple_opt_d">crvena, zelena i plava</li><li data-component="feedback" id="pygame__basics_quiz_color_purple_opt_d">Pokušajte ponovo</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pygame__basics_quiz_color_approx">
+            <p>Q-41: Kako bi se boja [240, 230, 18] najbolje mogla nazvati?</p>
+
+            <li data-component="answer"  id="pygame__basics_quiz_color_approx_opt_a">Plavkasta</li><li data-component="feedback" id="pygame__basics_quiz_color_approx_opt_a">Pokušajte ponovo</li>
+            
+            <li data-component="answer"  id="pygame__basics_quiz_color_approx_opt_b">Crvenkasta</li><li data-component="feedback" id="pygame__basics_quiz_color_approx_opt_b">Pokušajte ponovo</li>
+            
+            <li data-component="answer" data-correct id="pygame__basics_quiz_color_approx_opt_c">Žućkasta</li><li data-component="feedback" id="pygame__basics_quiz_color_approx_opt_c">Tačno</li>
+            
+            <li data-component="answer"  id="pygame__basics_quiz_color_approx_opt_d">Zelenkasta</li><li data-component="feedback" id="pygame__basics_quiz_color_approx_opt_d">Pokušajte ponovo</li>
+            
+
+            </ul>
+            </div>
+            <p>Boje se dakle, predstavljaju sa tri, a koordinate tačaka sa dva broja.
+Proveri da li ovo razumeš tako što ćeš odgovoriti na naredno pitanje.</p>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="pygame__basics_quiz_colors_and_coordinates">
+    <span data-component="question">Q-42: uparite boje i koordinate, ako je ekran širine 300 i visine 200 piksela.</span>
+	<span data-component=feedback>Pokušajte ponovo!</span>
+
+    <li data-component="draggable" id="pygame__basics_quiz_colors_and_coordinates_drag1">Crna boja</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_colors_and_coordinates_drag1">[0, 0, 0]</li>
+
+    <li data-component="draggable" id="pygame__basics_quiz_colors_and_coordinates_drag2">Gornje levo teme ekrana</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_colors_and_coordinates_drag2">[0, 0]</li>
+
+    <li data-component="draggable" id="pygame__basics_quiz_colors_and_coordinates_drag3">Ljubičasta boja</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_colors_and_coordinates_drag3">(255, 0, 255)</li>
+
+    <li data-component="draggable" id="pygame__basics_quiz_colors_and_coordinates_drag4">Donje desno teme ekrana</li>
+    <li data-component="dropzone" for="pygame__basics_quiz_colors_and_coordinates_drag4">(300, 200)</li>
+</ul></div></div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Biblioteka PyGame' data-toggle="tooltip"><a href="03_PyGame_01_Intro.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Crtanje' data-toggle="tooltip"><a href="03_PyGame_10_Drawing.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Biblioteka PyGame' data-toggle="tooltip"><a href="03_PyGame_01_Intro.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Crtanje' data-toggle="tooltip"><a href="03_PyGame_10_Drawing.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container text-center">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
