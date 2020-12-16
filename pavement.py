@@ -12,16 +12,16 @@ sys.path.append(os.getcwd())
 home_dir = os.getcwd()
 master_url = 'http://127.0.0.1:8000'
 master_app = 'runestone'
-serving_dir = "./build/TxtProgInPython"
+serving_dir = "./_build/TxtProgInPython"
 dest = "docs"
 
 options(
     sphinx = Bunch(docroot=".",),
 
     build = Bunch(
-        builddir="./build/TxtProgInPython",
+        builddir="./_build/TxtProgInPython",
         sourcedir="_sources",
-        outdir="./build/TxtProgInPython",
+        outdir="./_build/TxtProgInPython",
         confdir=".",
         project_name = "TxtProgInPython",
         template_args={'course_id': 'TxtProgInPython',
@@ -43,8 +43,7 @@ options(
     )
 )
 
-version = pkg_resources.require("runestone")[0].version
-options.build.template_args['runestone_version'] = version
+
 
 # If DBURL is in the environment override dburl
 options.build.template_args['dburl'] = get_dburl(outer=locals())
