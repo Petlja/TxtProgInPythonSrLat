@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr_RS">
   <head>
     <meta charset="utf-8" />
-    <title>Upravljanje Karelom &#8212; Tekstualno programiranje u Pajtonu</title>
+<title>Upravljanje Karelom &#8212; Tekstualno programiranje u Pajtonu</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -52,7 +52,6 @@
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
     <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
     <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="../_static/activecode.js"></script>
@@ -63,7 +62,6 @@
     <script type="text/javascript" src="../_static/timedmc.js"></script>
     <script type="text/javascript" src="../_static/timed.js"></script>
     <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/clickable.js"></script>
     <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
@@ -75,17 +73,14 @@
     <script type="text/javascript" src="../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/fitb.js"></script>
     <script type="text/javascript" src="../_static/timedfitb.js"></script>
     <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/matrixeq.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
     <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
     <script type="text/javascript" src="../_static/reveal.js"></script>
@@ -101,7 +96,6 @@
     <script type="text/javascript" src="../_static/karelUI.js"></script>
     <script type="text/javascript" src="../_static/karel.js"></script>
     <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
-    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
     <script type="text/javascript" src="../_static/notes.js"></script>
     <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
     <script type="text/javascript" src="../_static/blockly/blockly_compressed.js"></script>
@@ -130,6 +124,7 @@
     <script type="text/javascript" src="../_static/blockpy/blocks/turtles.js"></script>
     <script type="text/javascript" src="../_static/blockpy/blocks/text.js"></script>
     <script type="text/javascript" src="../_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -167,7 +162,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'TxtProgInPython';
-  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.runestone_version = '';
   eBookConfig.imagesDir = '../_images/';
   eBookConfig.staticDir = '../_static/';
   if(typeof(Sk) != "undefined")
@@ -204,12 +199,11 @@
     </div>
   </div>
 </nav>
-<br/>
 
 
 <div class="container col-md-12" id="continue-reading"></div>
 
-<div class="container col-md-8 col-md-offset-2" id="main-content">
+<div class="container col-md-8 col-md-offset-2" id="main-content" style="margin-top: 70px;">
   
   <p>Odmakni</p>
 <hr class="docutils" />
@@ -548,7 +542,7 @@
 <p>Pošto je ovaj program još duži od prethodnog, da bismo se lakše orijentisali u programu i pratili dokle smo doveli Karela, grupisali smo po nekoliko naredbi koje čine jednu etapu putovanja u jedan red programa. Na kraju svakog reda je komentar koji objašnjava grupu naredbi u tom redu.</p>
 <p>Primetite da je pri ovakvom pisanju programa potrebno između naredbi pisati znak <code class="docutils literal notranslate"><span class="pre">;</span></code> (iza poslednje naredbe u redu, ovaj znak se ne piše).</p>
 <p>Naredbe mogu da se grupišu i drugačije, na primer tako što se grupa naredbi (napisanih jedna ispod druge) razdvoji praznim redom od sledeće grupe. Ovakav način grupisanja je mnogo češće u upotrebi, jer naredbe obično nisu tako tako kratke kao ove za upravljanje Karelom. Evo kako bi to izgledalo:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">karel</span> <span class="k">import</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">karel</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># idi do polja (3, 1) i okreni se na sever&quot;</span>
 <span class="n">napred</span><span class="p">()</span>
@@ -1039,9 +1033,9 @@ napred();                            # do (2, 3)
   
       <div class="col-md-12">
 <ul class="pager">
-        <li id="relations-prev" title='Previous chapter - Karel' data-toggle="tooltip"><a href="toctree.html">Previous chapter</a></li>
+        <li id="relations-prev" title='Previous chapter - Karel' data-toggle="tooltip"><a href="toctree.html">Претходно поглавље</a></li>
     
-        <li id="relations-next" title='Next chapter - Skratite pisanje programa' data-toggle="tooltip"><a href="01_Karel_02_for.html">Next chapter</a></li>
+        <li id="relations-next" title='Next chapter - Skratite pisanje programa' data-toggle="tooltip"><a href="01_Karel_02_for.html">Следеће поглавље</a></li>
 </ul>
 
 <!-- <ul class="pager"> -->
@@ -1063,13 +1057,11 @@ napred();                            # do (2, 3)
   
 </div>
 <footer class="footer col-md-12">
-    <div class="container text-center">
+    <div class="container">
         <div class="text-center">
             <hr>
             <p class="text-muted">
-                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
-                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+                <span class="pull-left">&copy; 2019 Petlja (Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
             </p>
         </div>
     </div>
