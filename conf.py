@@ -29,6 +29,7 @@ import petljadoc
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
+petljadoc.runestone_ext.add_module('blockpylib')
 
 extensions = ['sphinx.ext.mathjax'] + [m for m in runestone_extensions() if not m.endswith("webgldemo")] + petljadoc.runestone_ext.extensions()
 
