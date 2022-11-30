@@ -1,7 +1,3 @@
-Odmakni
-
-~~~~
-
 Upravljanje Karelom
 ===================
 
